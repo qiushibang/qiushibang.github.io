@@ -3,410 +3,406 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>邱仕邦 Shibang Qiu · qiushibang</title>
-<meta name="description" content="邱仕邦（Shibang Qiu，qiushibang）：AI Agent 工程师、复杂网络研究者，Physica A 期刊论文作者。多智能体系统、企业级 RAG 工具链、供应链网络风险研究。">
-<meta property="og:title" content="邱仕邦 Shibang Qiu · qiushibang">
+<title>邱仕邦 Shibang Qiu</title>
+<meta name="description" content="邱仕邦（Shibang Qiu）：北京航空航天大学硕士在读，AI Agent 工程师，Physica A 论文作者，ClawHub 技能发布者，OpenCareer 独立开发者。">
+<meta property="og:title" content="邱仕邦 Shibang Qiu">
 <meta property="og:description" content="AI Agent 工程师 · 复杂网络研究者 · Physica A 论文作者">
 <meta property="og:type" content="profile">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%232563eb'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='32' font-weight='700' text-anchor='middle' fill='%23fff'%3Eq%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%232f6bd8'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' text-anchor='middle' fill='%23fff'%3EQ%3C/text%3E%3C/svg%3E">
 <style>
   :root {
-    --bg: #f6f7f9;
-    --card: #ffffff;
-    --text: #1f2328;
-    --text-2: #4a515c;
-    --text-3: #737f8d;
-    --line: #e4e7ec;
-    --accent: #2563eb;
-    --accent-soft: #eff4ff;
-    --amber: #b45309;
-    --amber-soft: #fef6e7;
-    --green: #047857;
-    --green-soft: #ecfdf5;
+    --bg: #ffffff;
+    --text: #40474f;
+    --text-strong: #262b31;
+    --text-3: #8a93a0;
+    --line: #e8eaee;
+    --link: #2f6bd8;
+    --link-line: rgba(47,107,216,.35);
     --serif: Georgia, "Times New Roman", "Songti SC", "SimSun", serif;
     --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "HarmonyOS Sans SC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
     --mono: "SF Mono", ui-monospace, "JetBrains Mono", Consolas, monospace;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
-  body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 15.5px; line-height: 1.85; -webkit-font-smoothing: antialiased; }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; text-underline-offset: 3px; }
-  ::selection { background: rgba(37,99,235,.18); }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 15.5px; line-height: 1.9; -webkit-font-smoothing: antialiased; }
+  a { color: var(--link); text-decoration: underline; text-decoration-color: var(--link-line); text-underline-offset: 3px; transition: text-decoration-color .2s; }
+  a:hover { text-decoration-color: var(--link); }
+  ::selection { background: rgba(47,107,216,.15); }
+  img { max-width: 100%; height: auto; }
 
-  /* ---------- 顶部导航 ---------- */
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- 顶部导航（仿 academicpages masthead） ---------- */
   .masthead {
     position: sticky; top: 0; z-index: 50;
-    background: rgba(255,255,255,.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    background: rgba(255,255,255,.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--line);
   }
-  .masthead-inner {
-    max-width: 1140px; margin: 0 auto; padding: 0 24px; height: 58px;
-    display: flex; align-items: center; justify-content: space-between; gap: 16px;
-  }
-  .site-title { font-family: var(--serif); font-size: 18px; font-weight: 700; color: var(--text); letter-spacing: .2px; }
-  .site-title span { color: var(--accent); }
-  .site-title:hover { text-decoration: none; }
-  .site-nav { display: flex; gap: 2px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-  .site-nav::-webkit-scrollbar { display: none; }
+  .masthead-inner { display: flex; align-items: baseline; gap: 6px; height: 62px; overflow-x: auto; scrollbar-width: none; }
+  .masthead-inner::-webkit-scrollbar { display: none; }
+  .site-nav { display: flex; align-items: baseline; gap: 4px; }
   .site-nav a {
-    color: var(--text-2); font-size: 14px; padding: 6px 13px; border-radius: 8px;
-    white-space: nowrap; transition: all .18s;
+    color: var(--text); text-decoration: none; font-size: 14.5px;
+    padding: 4px 12px; border-radius: 6px; white-space: nowrap; transition: background .2s, color .2s;
   }
-  .site-nav a:hover, .site-nav a.active { color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+  .site-nav a:hover { color: var(--link); background: rgba(47,107,216,.06); }
+  .site-nav a.active { color: var(--link); }
+  .site-nav a.nav-home { font-size: 19px; font-weight: 700; margin-right: 14px; }
 
-  /* ---------- 布局 ---------- */
-  .page { max-width: 1140px; margin: 0 auto; padding: 40px 24px 30px; }
-  .layout { display: grid; grid-template-columns: 272px minmax(0, 1fr); gap: 36px; align-items: start; }
+  /* ---------- 布局：左栏 + 内容 ---------- */
+  .page { display: grid; grid-template-columns: 232px minmax(0, 1fr); gap: 48px; padding-top: 44px; padding-bottom: 30px; }
 
-  /* ---------- 侧边栏 ---------- */
-  .sidebar { position: sticky; top: 82px; }
-  .avatar-ring { padding: 3px; background: linear-gradient(135deg, #93c5fd, #2563eb); border-radius: 50%; width: 148px; height: 148px; margin-bottom: 18px; }
-  .avatar-ring img { width: 100%; height: 100%; border-radius: 50%; display: block; border: 3px solid #fff; object-fit: cover; }
-  .sidebar h1 { font-family: var(--serif); font-size: 25px; font-weight: 800; letter-spacing: .2px; line-height: 1.3; }
-  .sidebar .handle { font-family: var(--mono); font-size: 13px; color: var(--text-3); margin: 3px 0 12px; }
-  .sidebar .titles { font-size: 14px; color: var(--text-2); line-height: 1.9; margin-bottom: 18px; }
-  .sidebar .titles b { color: var(--text); font-weight: 600; }
-  .social-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
-  .sbtn {
-    display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-2);
-    border: 1px solid var(--line); background: var(--card); border-radius: 9px; padding: 6px 13px;
-    transition: all .18s;
-  }
-  .sbtn:hover { color: var(--accent); border-color: rgba(37,99,235,.4); background: var(--accent-soft); text-decoration: none; box-shadow: 0 2px 10px rgba(37,99,235,.08); }
-  .sbtn svg { width: 15px; height: 15px; fill: currentColor; }
-  .side-stats { border-top: 1px solid var(--line); padding-top: 16px; font-size: 13px; color: var(--text-3); }
-  .side-stats .row { display: flex; justify-content: space-between; padding: 3px 0; }
-  .side-stats .row b { color: var(--text); font-family: var(--mono); font-weight: 600; }
+  /* ---------- 侧栏 ---------- */
+  .sidebar { position: sticky; top: 86px; }
+  .sidebar .avatar { width: 172px; height: 172px; border-radius: 50%; object-fit: cover; display: block; border: 1px solid var(--line); }
+  .sidebar h1 { font-family: var(--serif); font-size: 27px; font-weight: 800; color: var(--text-strong); margin: 16px 0 2px; letter-spacing: .5px; }
+  .sidebar .handle { font-family: var(--mono); font-size: 12.5px; color: var(--text-3); margin-bottom: 10px; }
+  .sidebar .titles { font-size: 14px; color: var(--text); line-height: 1.95; margin-bottom: 14px; }
+  .side-links { list-style: none; font-size: 14px; }
+  .side-links li { margin: 3px 0; }
+  .side-links a { display: inline-flex; align-items: center; gap: 8px; color: var(--text); }
+  .side-links a:hover { color: var(--link); }
+  .side-links svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
+  .side-links .ico { display: inline-block; width: 15px; text-align: center; flex-shrink: 0; }
 
-  /* ---------- 内容区 ---------- */
-  .content { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 40px 44px 34px; box-shadow: 0 1px 3px rgba(16,24,40,.04), 0 8px 28px rgba(16,24,40,.04); }
-  section { margin-bottom: 42px; }
-  section:last-child { margin-bottom: 8px; }
+  /* ---------- 内容 ---------- */
+  .content { min-width: 0; padding-bottom: 30px; }
+  section { margin-bottom: 46px; scroll-margin-top: 84px; }
   h2.sec {
-    font-size: 21px; font-weight: 750; letter-spacing: .2px; margin-bottom: 20px;
-    padding-bottom: 12px; border-bottom: 1px solid var(--line);
-    display: flex; align-items: center; gap: 10px;
+    font-size: 21px; font-weight: 750; color: var(--text-strong); letter-spacing: .3px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--line); margin-bottom: 18px;
   }
-  h2.sec .zh-en { font-family: var(--mono); font-size: 11px; color: var(--text-3); font-weight: 500; letter-spacing: 1.5px; margin-left: auto; }
 
-  .bio p { color: var(--text-2); margin-bottom: 12px; text-align: justify; }
-  .bio p b { color: var(--text); font-weight: 650; }
-  .fact-list { list-style: none; margin-top: 6px; }
-  .fact-list li { padding-left: 20px; position: relative; color: var(--text-2); margin-bottom: 6px; font-size: 14.5px; }
-  .fact-list li::before { content: "▸"; position: absolute; left: 2px; color: var(--accent); }
+  .bio p { margin-bottom: 12px; text-align: justify; }
+  .bio b { color: var(--text-strong); }
 
-  /* 徽章 */
-  .badge {
-    display: inline-block; font-size: 11.5px; font-family: var(--mono); font-weight: 600;
-    padding: 1.5px 9px; border-radius: 6px; letter-spacing: .4px; vertical-align: 2px; white-space: nowrap;
-  }
-  .badge.blue { color: var(--accent); background: var(--accent-soft); border: 1px solid #d6e4ff; }
-  .badge.amber { color: var(--amber); background: var(--amber-soft); border: 1px solid #fde8c4; }
-  .badge.green { color: var(--green); background: var(--green-soft); border: 1px solid #c8f0dd; }
+  /* 时间线 bullet（仿学术站条目） */
+  .tl { list-style: none; }
+  .tl > li { position: relative; padding-left: 20px; margin-bottom: 12px; }
+  .tl > li::before { content: "•"; position: absolute; left: 4px; color: var(--text-3); }
+  .tl .date { font-family: var(--mono); font-weight: 700; color: var(--text-strong); font-size: 14px; }
+  .tl .role { font-weight: 700; color: var(--text-strong); }
+  .sub { list-style: none; margin-top: 6px; }
+  .sub li { position: relative; padding-left: 18px; font-size: 14.2px; color: var(--text); margin-bottom: 5px; text-align: justify; }
+  .sub li::before { content: "–"; position: absolute; left: 2px; color: var(--text-3); }
+  .sub b { color: var(--text-strong); }
 
-  /* 论文条目 */
-  .pub { padding: 18px 20px; border: 1px solid var(--line); border-radius: 12px; margin-bottom: 14px; background: #fcfdfe; transition: box-shadow .2s, border-color .2s; }
-  .pub:hover { border-color: #c9d8f8; box-shadow: 0 4px 18px rgba(37,99,235,.07); }
-  .pub .pos { font-family: var(--mono); font-size: 12px; color: var(--accent); font-weight: 700; margin-right: 8px; }
-  .pub .title { font-family: var(--serif); font-size: 16.5px; font-weight: 700; line-height: 1.55; }
-  .pub .title a { color: var(--text); }
-  .pub .title a:hover { color: var(--accent); }
-  .pub .authors { font-size: 13.5px; color: var(--text-3); margin: 5px 0 3px; }
-  .pub .authors .me { color: var(--text); font-weight: 700; border-bottom: 2px solid #93c5fd; padding-bottom: 1px; }
-  .pub .venue { font-size: 13.5px; color: var(--text-2); font-style: italic; margin-bottom: 8px; }
-  .pub .note { font-size: 13.5px; color: var(--text-2); margin-bottom: 10px; }
-  .pub .links { display: flex; flex-wrap: wrap; gap: 8px; }
-  .plink {
-    font-size: 12.5px; font-family: var(--mono); color: var(--accent);
-    border: 1px solid #d6e4ff; background: #fff; border-radius: 7px; padding: 3px 11px;
-    transition: all .16s;
-  }
-  .plink:hover { background: var(--accent); color: #fff; text-decoration: none; border-color: var(--accent); }
+  /* 论文 */
+  .pub .title { font-family: var(--serif); font-size: 17px; font-weight: 700; line-height: 1.6; color: var(--text-strong); }
+  .pub .authors { font-size: 14px; margin: 6px 0 2px; }
+  .pub .authors .me { font-weight: 700; color: var(--text-strong); }
+  .pub .venue { font-size: 14px; font-style: italic; color: var(--text); margin-bottom: 8px; }
+  .pub .note { font-size: 14.2px; margin-bottom: 10px; text-align: justify; }
+  .pub .links { font-size: 13.5px; }
+  .badge { display: inline-block; font-size: 11px; font-family: var(--mono); font-weight: 600; padding: 1px 8px; border-radius: 5px; vertical-align: 2px; }
+  .badge.blue { color: #2f6bd8; background: #eef4ff; border: 1px solid #d8e4fa; }
+  .badge.amber { color: #9a6a1a; background: #fdf5e6; border: 1px solid #f0e2c4; }
+  .badge.green { color: #1a7a52; background: #ecf8f2; border: 1px solid #cbeddd; }
 
-  /* 时间线条目 */
-  .entry { display: grid; grid-template-columns: 118px minmax(0,1fr); gap: 18px; padding: 14px 0; border-bottom: 1px dashed var(--line); }
-  .entry:last-child { border-bottom: none; }
-  .entry .date { font-family: var(--mono); font-size: 12.5px; color: var(--text-3); padding-top: 4px; white-space: nowrap; }
-  .entry .date b { color: var(--text-2); font-weight: 600; display: block; font-size: 13.5px; }
-  .entry .body h3 { font-size: 16px; font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
-  .entry .body h3 .en { font-family: var(--mono); font-size: 12px; color: var(--text-3); font-weight: 500; }
-  .entry .body p { font-size: 14px; color: var(--text-2); margin-bottom: 8px; text-align: justify; }
-  .entry .body p b { color: var(--text); font-weight: 650; }
-  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-  .tag { font-size: 11.5px; font-family: var(--mono); color: var(--text-2); background: #f3f5f8; border: 1px solid var(--line); padding: 1.5px 9px; border-radius: 6px; }
+  /* 项目条目 */
+  .entry { margin-bottom: 26px; }
+  .entry h3 { font-size: 17px; font-weight: 750; color: var(--text-strong); margin-bottom: 6px; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .entry h3 .en { font-family: var(--mono); font-size: 12px; color: var(--text-3); font-weight: 500; }
+  .entry p { font-size: 14.5px; text-align: justify; margin-bottom: 8px; }
+  .entry p b { color: var(--text-strong); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .tag { font-size: 11.5px; font-family: var(--mono); color: #5c6570; background: #f4f6f8; border: 1px solid var(--line); padding: 1px 9px; border-radius: 5px; }
+
+  /* 截图排版 */
+  .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0 6px; }
+  .shots figure { margin: 0; }
+  .shots a { display: block; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 1px 3px rgba(20,30,45,.06), 0 8px 24px rgba(20,30,45,.07); transition: box-shadow .25s, transform .25s; }
+  .shots a:hover { box-shadow: 0 2px 6px rgba(20,30,45,.08), 0 14px 34px rgba(20,30,45,.12); transform: translateY(-2px); }
+  .shots img { display: block; width: 100%; }
+  .shots figcaption { font-size: 12.5px; color: var(--text-3); text-align: center; margin-top: 8px; font-family: var(--mono); }
+
+  .claw-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 26px; align-items: center; }
+  .claw-grid .txt p { font-size: 14.5px; text-align: justify; margin-bottom: 10px; }
+  .claw-grid .txt b { color: var(--text-strong); }
+  .claw-grid .dl { font-family: var(--mono); font-weight: 700; color: #2f6bd8; }
+  .claw-shot { border-radius: 12px; border: 1px solid var(--line); box-shadow: 0 1px 3px rgba(20,30,45,.06), 0 10px 30px rgba(20,30,45,.09); display: block; overflow: hidden; transition: box-shadow .25s, transform .25s; }
+  .claw-shot:hover { box-shadow: 0 2px 6px rgba(20,30,45,.08), 0 16px 40px rgba(20,30,45,.13); transform: translateY(-2px); }
+  .claw-shot img { display: block; width: 100%; }
 
   /* 技能 */
-  .skill-group { margin-bottom: 16px; }
-  .skill-group h3 { font-size: 14.5px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
-  .skill-group .tags .tag { font-size: 12.5px; padding: 3px 12px; }
+  .skill-group { margin-bottom: 14px; }
+  .skill-group h3 { font-size: 15px; font-weight: 700; color: var(--text-strong); margin-bottom: 6px; }
 
-  /* ClawHub */
-  .clawhub-box {
-    display: flex; gap: 18px; align-items: flex-start; padding: 20px 22px;
-    border: 1px solid #fde8c4; background: linear-gradient(135deg, #fffdf6, #fef6e7); border-radius: 12px;
-  }
-  .clawhub-box .emoji { font-size: 34px; line-height: 1; padding-top: 4px; }
-  .clawhub-box p { font-size: 14px; color: var(--text-2); }
-  .clawhub-box p b { color: var(--text); }
-  .clawhub-box .dl { font-family: var(--mono); color: var(--amber); font-weight: 700; }
+  footer { border-top: 1px solid var(--line); margin-top: 20px; }
+  .foot-inner { max-width: 1120px; margin: 0 auto; padding: 20px 24px 34px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: var(--text-3); }
 
-  /* 联系 */
-  .contact-list { list-style: none; }
-  .contact-list li { display: flex; gap: 12px; align-items: baseline; padding: 7px 0; font-size: 14.5px; color: var(--text-2); }
-  .contact-list .k { font-family: var(--mono); font-size: 12.5px; color: var(--text-3); width: 88px; flex-shrink: 0; }
-
-  footer { max-width: 1140px; margin: 0 auto; padding: 26px 24px 40px; }
-  .foot-inner { border-top: 1px solid var(--line); padding-top: 22px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 13px; color: var(--text-3); }
-
-  /* ---------- 响应式 ---------- */
-  @media (max-width: 900px) {
-    .layout { grid-template-columns: 1fr; gap: 26px; }
-    .sidebar { position: static; display: grid; grid-template-columns: 108px minmax(0,1fr); gap: 0 22px; align-items: center; }
-    .avatar-ring { width: 108px; height: 108px; margin-bottom: 0; grid-row: 1 / span 3; }
-    .side-stats { display: none; }
-    .content { padding: 26px 22px 22px; }
-    .entry { grid-template-columns: 1fr; gap: 4px; }
-    .entry .date { padding-top: 0; }
-    .entry .date b { display: inline; margin-right: 8px; }
-    .clawhub-box { flex-direction: column; gap: 10px; }
+  /* ---------- 响应式（仿参考站：窄屏单栏，头像+姓名横排） ---------- */
+  @media (max-width: 880px) {
+    .page { grid-template-columns: 1fr; gap: 24px; padding-top: 26px; }
+    .masthead-inner { height: 54px; }
+    .site-nav a { font-size: 13px; padding: 4px 9px; }
+    .site-nav a.nav-home { font-size: 16px; margin-right: 6px; }
+    .sidebar { position: static; display: grid; grid-template-columns: 116px minmax(0,1fr); column-gap: 20px; align-items: center; }
+    .sidebar .avatar { width: 116px; height: 116px; grid-row: 1 / span 3; }
+    .sidebar h1 { margin-top: 0; font-size: 23px; }
+    .sidebar .handle { margin-bottom: 6px; }
+    .sidebar .titles { display: none; }
+    .side-links { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px 18px; border-top: 1px solid var(--line); padding-top: 12px; }
+    .side-links li { margin: 0; }
+    .content { padding-bottom: 10px; }
+    section { margin-bottom: 38px; }
+    .shots { grid-template-columns: 1fr; }
+    .claw-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 
 <header class="masthead">
-  <div class="masthead-inner">
-    <a class="site-title" href="#top">邱仕邦 <span>Shibang Qiu</span></a>
+  <div class="wrap masthead-inner">
     <nav class="site-nav">
-      <a href="#about" data-sec="about">关于我</a>
-      <a href="#pubs" data-sec="pubs">学术论文</a>
-      <a href="#products" data-sec="products">产品系统</a>
-      <a href="#projects" data-sec="projects">开源项目</a>
-      <a href="#clawhub" data-sec="clawhub">ClawHub</a>
-      <a href="#skills" data-sec="skills">技能</a>
-      <a href="#contact" data-sec="contact">联系</a>
+      <a class="nav-home" href="#about">关于我</a>
+      <a href="#edu">学历</a>
+      <a href="#work">实习</a>
+      <a href="#pubs">学术</a>
+      <a href="#products">产品</a>
+      <a href="#opensource">开源</a>
+      <a href="#clawhub">ClawHub</a>
+      <a href="#skills">技能</a>
     </nav>
   </div>
 </header>
 
-<div class="page" id="top">
-  <div class="layout">
+<div class="wrap page">
 
-    <!-- ============ 侧边栏 ============ -->
-    <aside class="sidebar">
-      <div class="avatar-ring"><img src="avatar.jpg" alt="Shibang Qiu 头像"></div>
-      <h1>邱仕邦</h1>
-      <div class="handle">Shibang Qiu · @qiushibang</div>
-      <div class="titles">
-        <b>AI Agent 工程师</b> · 复杂网络研究者<br>
-        <i>Physica A</i>（Elsevier）论文作者<br>
-        ClawHub 技能发布者<br>
-        OpenCareer · TRIZ-Copilot 作者
-      </div>
-      <div class="social-btns">
-        <a class="sbtn" href="https://github.com/qiushibang" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          GitHub
-        </a>
-        <a class="sbtn" href="https://clawhub.ai/qiushibang" target="_blank" rel="noopener">🦞 ClawHub</a>
-        <a class="sbtn" href="https://app.opencareer.online/" target="_blank" rel="noopener">🚀 OpenCareer</a>
-        <a class="sbtn" href="https://www.sciencedirect.com/science/article/pii/S0378437126007405" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 12h8v2H8v-2zm0 4h8v2H8v-2z"/></svg>
-          论文
-        </a>
-      </div>
-      <div class="side-stats">
-        <div class="row"><span>原创项目</span><b>12</b></div>
-        <div class="row"><span>SCI 期刊论文</span><b>1</b></div>
-        <div class="row"><span>ClawHub 累计下载</span><b>1.7k+</b></div>
-        <div class="row"><span>闭源智能体系统</span><b>2</b></div>
-      </div>
-    </aside>
+  <!-- ============ 侧栏 ============ -->
+  <aside class="sidebar">
+    <img class="avatar" src="avatar.jpg" alt="邱仕邦" width="172" height="172">
+    <h1>邱仕邦</h1>
+    <div class="handle">Shibang Qiu · @qiushibang</div>
+    <div class="titles">
+      北京航空航天大学 · 硕士在读<br>
+      AI Agent 工程师<br>
+      <i>Physica A</i>（Elsevier）论文作者<br>
+      ClawHub 技能发布者
+    </div>
+    <ul class="side-links">
+      <li><a href="mailto:2294437194@qq.com"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 5.1-8-5.1V6.29l8 5.1 8-5.1v1.95z"/></svg>Email</a></li>
+      <li><a href="https://github.com/qiushibang" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>GitHub</a></li>
+      <li><a href="https://clawhub.ai/qiushibang" target="_blank" rel="noopener"><span class="ico">🦞</span>ClawHub</a></li>
+      <li><a href="https://app.opencareer.online/" target="_blank" rel="noopener"><span class="ico">🚀</span>OpenCareer</a></li>
+      <li><a href="https://www.sciencedirect.com/science/article/pii/S0378437126007405" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 12h8v2H8v-2zm0 4h8v2H8v-2z"/></svg>论文</a></li>
+    </ul>
+  </aside>
 
-    <!-- ============ 内容 ============ -->
-    <main class="content">
+  <!-- ============ 内容 ============ -->
+  <main class="content">
 
-      <section id="about">
-        <h2 class="sec">👤 关于我 <span class="zh-en">ABOUT ME</span></h2>
-        <div class="bio">
-          <p>
-            邱仕邦（Shibang Qiu，qiushibang），AI Agent 工程师与复杂网络研究者，工程与研究的复合背景。
-            专注<b>多智能体系统</b>与<b>企业级 RAG 工具链</b>的工程落地：独立设计并实现了基于自研 TurnEngine
-            运行时的求职智能体 OpenCareer（已上线）与 TRIZ 多智能体协同创新平台 TRIZ-Copilot；
-            同时在 <i>Physica A</i> 发表供应链网络研究，提出识别飞机制造供应链隐性瓶颈的 SCAA 方法。
-          </p>
-          <p>
-            坚信「能落地的研究，有依据的工程」：论文配可复现代码，产品按论文级严谨度构建。
-            技能作品同步发布于 ClawHub（OpenClaw 智能体生态），累计被下载 1.7k+ 次。
-          </p>
-          <ul class="fact-list">
-            <li>论文作者（3rd Author），<i>Physica A: Statistical Mechanics and its Applications</i>（Elsevier，SCI）</li>
-            <li>独立开发两个智能体系统：OpenCareer（已上线）与 TRIZ-Copilot</li>
-            <li>开源 8 个项目：Claude Code Skills、Chrome 扩展、微信小程序与数据科学工具</li>
-            <li>ClawHub 技能发布者，覆盖飞书办公、企业 RAG、Skill 自动开发等场景</li>
+    <section id="about">
+      <div class="bio">
+        <p>
+          <b>邱仕邦</b>，北京航空航天大学工业工程与管理硕士在读（推免），AI Agent 工程师，AI、工程、研究复合背景。
+          专注多智能体系统与企业级 RAG 的产品落地：独立开发已上线的求职 Agent <a href="https://app.opencareer.online/" target="_blank" rel="noopener">OpenCareer</a>；
+          在 <i>Physica A</i>（Elsevier）发表供应链网络研究；技能作品发布于 ClawHub，累计下载 <b>1.8k+</b>。
+        </p>
+      </div>
+    </section>
+
+    <section id="edu">
+      <h2 class="sec">📖 学历</h2>
+      <ul class="tl">
+        <li>
+          <span class="date">2025.09 - 2028.06</span>, <span class="role">硕士（推免）</span>, 北京航空航天大学, 工业工程与管理.
+        </li>
+        <li>
+          <span class="date">2021.09 - 2025.06</span>, <span class="role">学士</span>, 北京航空航天大学, 工业工程. GPA 3.83/4.00.
+        </li>
+      </ul>
+    </section>
+
+    <section id="work">
+      <h2 class="sec">💼 实习经历</h2>
+      <ul class="tl">
+        <li>
+          <span class="date">2026.06 - 至今</span>, <span class="role">产品经理</span>, Lark Base AI · 多维表格智能体, 字节跳动, 北京.
+          <ul class="sub">
+            <li>需求 owner，主导 <b>5 项功能</b>从需求定义、方案设计到上线全量的完整迭代；实测 8 款办公 Agent（WorkBuddy / QwenWork / Kimi Work / GenSpark 等），提炼「交互-能力-沉淀-集成-基座」五层框架，定位多维表格智能体的能力差距。</li>
+            <li><b>Trigger 数据分析与归因</b>：清洗 8,664 条未执行明细、回看执行 trace，发现 46% 异常 case 存在有效条件缺失；提出 AI/手动配置双向切换与自然语言生成结构化条件，任务执行成功率 <b>+10%</b>。</li>
+            <li><b>意图路由（Decision Agent）</b>：负责意图分发链路的产品设计与上线（Workflow 编排 + Agent Harness：强制意图直连、SpecDoc 状态判定、拒识回流重分配），配套 9×12×2 路由评测方案完成验收。</li>
           </ul>
+        </li>
+        <li>
+          <span class="date">2026.03 - 2026.06</span>, <span class="role">AI Coding / Agent Skill 产品与开发</span>, TikTok 研发 · PMO, 字节跳动, 北京.
+          <ul class="sub">
+            <li><b>团队知识库</b>：面向 PMO 沉淀的 1000+ 项目文档构建团队级 RAG 知识库，完成多源文档解析清洗、语义检索与答案溯源链路。</li>
+            <li><b>Agent Skills</b>：基于 OpenClaw、Hermes 等设计开发 <b>10+ Skills</b>（项目管理、会议室预订、多文档处理、知识检索、浏览器自动化），通用能力开源至 ClawHub，累计下载 <b>1.8k+</b>。</li>
+            <li><b>Meego 项目管理增强</b>：打通需求看板，将工作项、状态、排期等封装为 Agent 可调用能力，实现自然语言复杂查询；开发 Skill Creator Pro 标准化 Skill 开发交付流程。</li>
+            <li><b>技术影响力</b>：持续在字节内部技术社区 ByteTech 输出 AI / Agent 内容，<b>4 次登上首页文章周榜</b>，获评「AI 知识达人」（社区 Top 3%）。</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section id="pubs">
+      <h2 class="sec">📄 学术论文</h2>
+      <div class="pub">
+        <div class="title">
+          <a href="https://www.sciencedirect.com/science/article/pii/S0378437126007405" target="_blank" rel="noopener">
+            Uncovering Hidden Bottlenecks in Aircraft Manufacturing Supply Chain Networks: A Structural-Constrained Asymmetric Analysis Approach
+          </a>
+          <span class="badge blue">SCI</span>
         </div>
-      </section>
+        <div class="authors">
+          Chen Wang, Bing Zhang, <span class="me">Shibang Qiu</span>, Yue Shi, Hua Zhang, Wenyan Song
+        </div>
+        <div class="venue">Physica A: Statistical Mechanics and its Applications, Elsevier, 2026.</div>
+        <div class="note">
+          提出结构约束不对称分析（SCAA）方法：以 FactSet 刻画有向供应链结构、GDELT 媒体共现信号刻画信息暴露，
+          与 DEMATEL / WINGS / HISA 系统对比，经 100 次重复 Monte Carlo 扰动验证稳健性，识别出传统对称分析遗漏的隐性瓶颈节点，为供应链中断提供早期预警工具。
+        </div>
+        <div class="links">
+          <a href="https://www.sciencedirect.com/science/article/pii/S0378437126007405" target="_blank" rel="noopener">ScienceDirect 全文</a>
+          &nbsp;·&nbsp;
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6625482" target="_blank" rel="noopener">SSRN 预印本</a>
+        </div>
+      </div>
+    </section>
 
-      <section id="pubs">
-        <h2 class="sec">📄 学术论文 <span class="zh-en">PUBLICATIONS</span></h2>
+    <section id="products">
+      <h2 class="sec">🤖 产品与智能体</h2>
 
-        <div class="pub">
-          <div class="title">
-            <span class="pos">3rd</span>
-            <a href="https://www.sciencedirect.com/science/article/pii/S0378437126007405" target="_blank" rel="noopener">
-              Uncovering Hidden Bottlenecks in Aircraft Manufacturing Supply Chain Networks: A Structural-Constrained Asymmetric Analysis Approach
+      <div class="entry">
+        <h3>OpenCareer <span class="badge green">已上线</span><span class="badge amber">私有仓库</span><span class="en">openworker-career · 独立开发</span></h3>
+        <p>
+          面向 AI / 互联网岗位的<b>一体化求职 Agent</b>：
+          接入 <b>34 个官方公开招聘源</b>，聚合近 <b>3 万条活跃岗位</b>并每日更新；设计岗位雷达、多简历求职档案、
+          证据化简历诊断与 JD / 已确认简历驱动的多轮模拟面试，形成「岗位发现 — JD 分析 — 简历诊断 — 申请跟踪 — 模拟面试 — 复盘」闭环；
+          通过官方来源追溯、简历事实确认、敏感数据隔离与关键写操作确认，降低模型幻觉与隐私风险。
+          不依赖 LangChain / LangGraph，基于<b>自研 TurnEngine 运行时</b>：discuss / plan / approval 三模式权限引擎，
+          原生多模型路由（OpenAI / Claude / Gemini / Bedrock），职业能力封装为 MCP Server 工具层，RapidOCR + ONNX 本地离线识别。
+        </p>
+        <div class="tags">
+          <span class="tag">自研 Agent 运行时</span><span class="tag">MCP Server</span><span class="tag">多模型路由</span>
+          <span class="tag">FastAPI</span><span class="tag">RapidOCR / ONNX</span><span class="tag">Playwright</span><span class="tag">Tauri</span>
+        </div>
+        <div class="shots">
+          <figure>
+            <a href="assets/opencareer-jobs.png" target="_blank" rel="noopener">
+              <img src="assets/opencareer-jobs.png" alt="OpenCareer 岗位雷达" width="1800" height="851" loading="lazy">
             </a>
-            <span class="badge blue">SCI</span>
-          </div>
-          <div class="authors">
-            Chen Wang, Bing Zhang, <span class="me">Shibang Qiu</span>, Yue Shi, Hua Zhang, Wenyan Song
-          </div>
-          <div class="venue">Physica A: Statistical Mechanics and its Applications, Elsevier, 2026.</div>
-          <div class="note">
-            提出结构约束不对称分析（SCAA）方法：以 FactSet 刻画有向供应链结构、GDELT 媒体共现信号刻画信息暴露，
-            与 DEMATEL / WINGS / HISA 系统对比，经 100 次重复 Monte Carlo 扰动验证稳健性，识别出传统对称分析遗漏的隐性瓶颈节点，为供应链中断提供早期预警工具。
-          </div>
-          <div class="links">
-            <a class="plink" href="https://www.sciencedirect.com/science/article/pii/S0378437126007405" target="_blank" rel="noopener">ScienceDirect 全文</a>
-            <a class="plink" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6625482" target="_blank" rel="noopener">SSRN 预印本</a>
-            <a class="plink" href="https://github.com/qiushibang/scaa-aircraft-supply-chain-reproducibility" target="_blank" rel="noopener">可复现代码</a>
-          </div>
+            <figcaption>岗位雷达 · 34 个官方招聘源 · 30,169 条活跃岗位</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/opencareer-agent.png" target="_blank" rel="noopener">
+              <img src="assets/opencareer-agent.png" alt="OpenCareer 求职 Agent 主界面" width="1800" height="840" loading="lazy">
+            </a>
+            <figcaption>求职 Agent · 对话式完成 JD 分析 / 简历诊断 / 模拟面试</figcaption>
+          </figure>
         </div>
-      </section>
-
-      <section id="products">
-        <h2 class="sec">🤖 产品与智能体系统 <span class="zh-en">PRODUCTS &amp; AGENT SYSTEMS</span></h2>
-
-        <div class="entry">
-          <div class="date"><b>2026.08</b>进行中</div>
-          <div class="body">
-            <h3>OpenCareer <span class="badge green">🚀 已上线</span><span class="badge amber">🔒 私有</span><span class="en">openworker-career</span></h3>
-            <p>
-              本地优先的求职智能体，已上线 <a href="https://app.opencareer.online/" target="_blank" rel="noopener">app.opencareer.online</a>。
-              不依赖 LangChain / LangGraph，基于<b>自研 TurnEngine 智能体运行时</b>构建：discuss / plan / approval 三模式权限引擎驱动
-              「计划 → 审批 → 执行」闭环；原生多模型路由（OpenAI / Claude / Gemini / Bedrock，aisuite 统一层）；
-              职业能力全部封装为 <b>MCP Server 工具层</b>——审批门控岗位爬取、多简历 Career Vault（本地 SQLite）、
-              证据化人岗匹配、定制 DOCX/PDF 简历、申请追踪与简历驱动的模拟面试；RapidOCR + ONNX 本地离线识别，数据不出本机。
-            </p>
-            <div class="tags">
-              <span class="tag">自研 Agent 运行时</span><span class="tag">MCP Server</span><span class="tag">多模型路由</span>
-              <span class="tag">FastAPI</span><span class="tag">RapidOCR / ONNX</span><span class="tag">Playwright</span><span class="tag">Tauri</span>
-            </div>
-          </div>
+        <div class="links" style="margin-top:8px; font-size:13.5px;">
+          <a href="https://app.opencareer.online/" target="_blank" rel="noopener">app.opencareer.online</a>
         </div>
+      </div>
 
-        <div class="entry">
-          <div class="date"><b>2026.06</b>TypeScript</div>
-          <div class="body">
-            <h3>TRIZ-Copilot <span class="badge amber">🔒 私有</span><span class="en">auto-triz</span></h3>
-            <p>
-              面向复杂产品创新设计的 <b>TRIZ 多智能体协同创新平台</b>：
-              Gatekeeper 多轮澄清工程问题，Planner-Executor 拆分四阶段 TRIZ 推理（问题分析 / 问题模型 / 理想解与矛盾 / 方案生成），
-              最终方案引入 <b>Patent RAG</b> 专利知识检索提供工程依据，用户反馈可定位回退阶段、迭代重生成，全程报告可编辑、可追溯。
-            </p>
-            <div class="tags">
-              <span class="tag">Next.js 16</span><span class="tag">React 19</span><span class="tag">TypeScript</span>
-              <span class="tag">DeepSeek</span><span class="tag">Supabase</span><span class="tag">Patent RAG</span>
-            </div>
-          </div>
+      <div class="entry">
+        <h3>TRIZ-Copilot <span class="badge amber">私有仓库</span><span class="en">auto-triz</span></h3>
+        <p>
+          面向复杂产品创新设计的 <b>TRIZ 多智能体协同创新平台</b>：
+          Gatekeeper 多轮澄清工程问题，Planner-Executor 拆分四阶段 TRIZ 推理（问题分析 / 问题模型 / 理想解与矛盾 / 方案生成），
+          最终方案引入 <b>Patent RAG</b> 专利知识检索提供工程依据，用户反馈可定位回退阶段、迭代重生成，全程报告可编辑、可追溯。
+        </p>
+        <div class="tags">
+          <span class="tag">Next.js 16</span><span class="tag">React 19</span><span class="tag">TypeScript</span>
+          <span class="tag">DeepSeek</span><span class="tag">Supabase</span><span class="tag">Patent RAG</span>
         </div>
-      </section>
+      </div>
 
-      <section id="projects">
-        <h2 class="sec">🔧 开源项目 <span class="zh-en">OPEN-SOURCE PROJECTS</span></h2>
-
-        <div class="entry">
-          <div class="date"><b>2026.08</b></div>
-          <div class="body">
-            <h3><a href="https://github.com/qiushibang/scaa-aircraft-supply-chain-reproducibility" target="_blank" rel="noopener">SCAA 复现包</a><span class="en">Python · 论文官方代码</span></h3>
-            <p>Physica A 论文的可复现包：SCAA / DEMATEL / WINGS / HISA 全部实现、匿名化 20 节点输入、100 次重复 Monte Carlo 扰动实验与固定种子规则。</p>
-            <h3><a href="https://github.com/qiushibang/duo-shiguang-wechat-mini-program" target="_blank" rel="noopener">双人食光</a><span class="en">微信小程序 · TypeScript</span></h3>
-            <p>以饮食分享为入口的双人生活记录小程序——把两个人的每一顿饭，变成共同的生活日志。</p>
-          </div>
+      <div class="entry">
+        <h3>低空经济供应链智能体 <span class="en">中航工业无人机所 · 2024.10 - 2025.03</span></h3>
+        <p>
+          针对低空经济供应链关系多层级、异构化，传统 RAG 无法处理复杂长链检索的痛点：
+          基于 <b>LightRAG / GraphRAG</b> 二次开发，构建供应链领域知识图谱，优化图检索路径与 LLM 生成的对齐机制。
+          有效抑制复杂关系检索中的幻觉，实现供应链风险智能识别与节点关联分析，覆盖 5 类风险场景，检索准确率 <b>+30%</b>。
+        </p>
+        <div class="tags">
+          <span class="tag">GraphRAG</span><span class="tag">LightRAG</span><span class="tag">知识图谱</span><span class="tag">Neo4j</span>
         </div>
+      </div>
+    </section>
 
-        <div class="entry">
-          <div class="date"><b>2026.06</b></div>
-          <div class="body">
-            <h3><a href="https://github.com/qiushibang/feishu-room-booking" target="_blank" rel="noopener">feishu-room-booking</a><span class="en">Python · Claude Skill</span></h3>
-            <p>飞书会议室智能查询与预订：覆盖全球 130+ 工区、7300+ 会议室，10 线程并行查询，自动预订 + RSVP 校验 + 偏好自学习。</p>
-            <h3><a href="https://github.com/qiushibang/tika-rag-skill" target="_blank" rel="noopener">tika-rag-skill</a><span class="en">Python · 企业 RAG</span></h3>
-            <p>将 Tika 企业知识库接入 AI 编程助手：零依赖安装、SSE 流式响应、双通道混合检索。</p>
-            <h3><a href="https://github.com/qiushibang/doc-to-board" target="_blank" rel="noopener">doc-to-board</a><span class="en">Shell · 飞书技能</span></h3>
-            <p>解析飞书文档为结构化大纲，自动生成排版精美的白板。</p>
-          </div>
-        </div>
+    <section id="opensource">
+      <h2 class="sec">🔧 开源项目</h2>
 
-        <div class="entry">
-          <div class="date"><b>2026.05</b></div>
-          <div class="body">
-            <h3><a href="https://github.com/qiushibang/skill-creator-pro" target="_blank" rel="noopener">skill-creator-pro</a><span class="en">Python · Skill 自动开发</span></h3>
-            <p>多 Agent 单包 Skill 自动开发器：需求澄清 → 计划确认 → TDD / verify 驱动开发 → 安全评审收口 → 飞书指南、画板与安装包交付。</p>
-            <h3><a href="https://github.com/qiushibang/ai-hot" target="_blank" rel="noopener">ai-hot</a><span class="en">Chrome 扩展 · React 19</span></h3>
-            <p>新标签页聚合 GitHub / X / YouTube / HuggingFace 的 AI 热门内容，一键推送飞书与企业微信。</p>
-            <h3><a href="https://github.com/qiushibang/trending-hub" target="_blank" rel="noopener">trending-hub</a><span class="en">Node.js · 数据聚合</span></h3>
-            <p>实时聚合 GitHub、Twitter/X 与内部技术社区的每日热点。</p>
-          </div>
-        </div>
-      </section>
+      <div class="entry">
+        <h3><a href="https://github.com/qiushibang/duo-shiguang-wechat-mini-program" target="_blank" rel="noopener">双人食光</a><span class="en">微信小程序 · TypeScript</span></h3>
+        <p>以饮食分享为入口的双人生活记录小程序——把两个人的每一顿饭，变成共同的生活日志。</p>
+      </div>
 
-      <section id="clawhub">
-        <h2 class="sec">🦞 ClawHub 技能发布 <span class="zh-en">CLAWHUB</span></h2>
-        <div class="clawhub-box">
-          <div class="emoji">🦞</div>
+      <div class="entry">
+        <h3><a href="https://github.com/qiushibang/feishu-room-booking" target="_blank" rel="noopener">feishu-room-booking</a><span class="en">Python · Claude Skill</span></h3>
+        <p>飞书会议室智能查询与预订：覆盖全球 130+ 工区、7300+ 会议室，10 线程并行查询，自动预订 + RSVP 校验 + 偏好自学习。ClawHub 下载 1.1k+。</p>
+        <h3><a href="https://github.com/qiushibang/tika-rag-skill" target="_blank" rel="noopener">tika-rag-skill</a><span class="en">Python · 企业 RAG</span></h3>
+        <p>将 Tika 企业知识库接入 AI 编程助手：零依赖安装、SSE 流式响应、双通道混合检索。</p>
+        <h3><a href="https://github.com/qiushibang/doc-to-board" target="_blank" rel="noopener">doc-to-board</a><span class="en">Shell · 飞书技能</span></h3>
+        <p>解析飞书文档为结构化大纲，自动生成排版精美的白板。</p>
+      </div>
+
+      <div class="entry">
+        <h3><a href="https://github.com/qiushibang/skill-creator-pro" target="_blank" rel="noopener">skill-creator-pro</a><span class="en">Python · Skill 自动开发</span></h3>
+        <p>多 Agent 单包 Skill 自动开发器：需求澄清 → 计划确认 → TDD / verify 驱动开发 → 安全评审收口 → 飞书指南、画板与安装包交付。</p>
+        <h3><a href="https://github.com/qiushibang/ai-hot" target="_blank" rel="noopener">ai-hot</a><span class="en">Chrome 扩展 · React 19</span></h3>
+        <p>新标签页聚合 GitHub / X / YouTube / HuggingFace 的 AI 热门内容，一键推送飞书与企业微信。</p>
+        <h3><a href="https://github.com/qiushibang/trending-hub" target="_blank" rel="noopener">trending-hub</a><span class="en">Node.js · 数据聚合</span></h3>
+        <p>实时聚合 GitHub、Twitter/X 与内部技术社区的每日热点。</p>
+      </div>
+    </section>
+
+    <section id="clawhub">
+      <h2 class="sec">🦞 ClawHub</h2>
+      <div class="claw-grid">
+        <div class="txt">
           <p>
-            技能作品同步发布于 <a href="https://clawhub.ai/qiushibang" target="_blank" rel="noopener"><b>ClawHub</b></a>
-            —— OpenClaw 智能体生态的技能分发平台（面向 AI Agent 的「npm」），累计下载 <span class="dl">1.7k+</span> 次。
-            发布内容围绕飞书办公自动化、企业知识库接入与 Skill 自动开发等场景，与上述开源项目一脉相承。
+            技能作品发布于 <a href="https://clawhub.ai/qiushibang" target="_blank" rel="noopener"><b>ClawHub</b></a>
+            —— OpenClaw 智能体生态的技能分发平台（面向 AI Agent 的「npm」），累计下载 <span class="dl">1.8k+</span>：
           </p>
+          <ul class="sub">
+            <li><b>Feishu Room Booking</b> · 飞书会议室查询、预订与配置技能，下载 1.1k+</li>
+            <li><b>ByteTech</b> · 技术文章元信息、目录与正文抓取技能，下载 660+</li>
+          </ul>
+          <p style="margin-top:10px;">与实习中开发的 10+ Agent Skills 一脉相承，把高频办公流程封装为可复用的 AI 能力。</p>
         </div>
-      </section>
+        <a class="claw-shot" href="https://clawhub.ai/qiushibang" target="_blank" rel="noopener">
+          <img src="assets/clawhub-profile.png" alt="ClawHub 主页：1.8k downloads" width="1800" height="939" loading="lazy">
+        </a>
+      </div>
+    </section>
 
-      <section id="skills">
-        <h2 class="sec">🛠 技能 <span class="zh-en">SKILLS</span></h2>
-        <div class="skill-group">
-          <h3>🤖 AI 与智能体</h3>
-          <div class="tags">
-            <span class="tag">多智能体编排</span><span class="tag">自研 Agent 运行时（TurnEngine）</span><span class="tag">RAG / GraphRAG</span>
-            <span class="tag">MCP</span><span class="tag">DeepSeek</span><span class="tag">Claude</span><span class="tag">Prompt 工程</span><span class="tag">Patent RAG</span>
-          </div>
+    <section id="skills">
+      <h2 class="sec">🛠 技能</h2>
+      <div class="skill-group">
+        <h3>🤖 AI 与 Agent</h3>
+        <div class="tags">
+          <span class="tag">Agent Harness</span><span class="tag">多智能体编排</span><span class="tag">RAG / GraphRAG</span>
+          <span class="tag">Agent Skill</span><span class="tag">MCP</span><span class="tag">意图路由 / Decision Agent</span><span class="tag">AI Coding</span><span class="tag">Prompt 工程</span>
         </div>
-        <div class="skill-group">
-          <h3>💻 工程与平台</h3>
-          <div class="tags">
-            <span class="tag">TypeScript</span><span class="tag">Python</span><span class="tag">Next.js / React</span><span class="tag">Node.js</span>
-            <span class="tag">微信小程序</span><span class="tag">Chrome 扩展</span><span class="tag">Tauri</span><span class="tag">FastAPI</span><span class="tag">Supabase</span><span class="tag">SQLite</span>
-          </div>
+      </div>
+      <div class="skill-group">
+        <h3>💻 工程</h3>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">SQL</span>
+          <span class="tag">Next.js / React</span><span class="tag">Node.js</span><span class="tag">FastAPI</span>
+          <span class="tag">SQLite</span><span class="tag">Neo4j</span><span class="tag">Chrome 扩展</span><span class="tag">微信小程序</span><span class="tag">Tauri</span>
         </div>
-        <div class="skill-group">
-          <h3>🔬 研究与数据</h3>
-          <div class="tags">
-            <span class="tag">复杂网络分析</span><span class="tag">SCAA / DEMATEL / WINGS / HISA</span><span class="tag">供应链风险</span>
-            <span class="tag">Monte Carlo</span><span class="tag">NumPy / pandas</span><span class="tag">FactSet / GDELT</span><span class="tag">TRIZ / ARIZ</span>
-          </div>
+      </div>
+      <div class="skill-group">
+        <h3>🎯 产品与设计</h3>
+        <div class="tags">
+          <span class="tag">Figma</span><span class="tag">需求分析 / PRD</span><span class="tag">数据分析与归因</span><span class="tag">竞争调研</span><span class="tag">复杂网络分析（SCAA / DEMATEL / WINGS）</span>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="contact">
-        <h2 class="sec">📮 联系与链接 <span class="zh-en">CONTACT</span></h2>
-        <ul class="contact-list">
-          <li><span class="k">GitHub</span><a href="https://github.com/qiushibang" target="_blank" rel="noopener">github.com/qiushibang</a></li>
-          <li><span class="k">ClawHub</span><a href="https://clawhub.ai/qiushibang" target="_blank" rel="noopener">clawhub.ai/qiushibang</a></li>
-          <li><span class="k">OpenCareer</span><a href="https://app.opencareer.online/" target="_blank" rel="noopener">app.opencareer.online</a></li>
-          <li><span class="k">论文</span><a href="https://www.sciencedirect.com/science/article/pii/S0378437126007405" target="_blank" rel="noopener">Physica A · Elsevier</a>（<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6625482" target="_blank" rel="noopener">SSRN 预印本</a>）</li>
-          <li><span class="k">Email</span>见 <a href="https://github.com/qiushibang" target="_blank" rel="noopener">GitHub 主页</a> 获取（避免爬虫收录）</li>
-        </ul>
-      </section>
-
-    </main>
-  </div>
+  </main>
 </div>
 
 <footer>
   <div class="foot-inner">
-    <span>© 2026 邱仕邦 Shibang Qiu（qiushibang）</span>
+    <span>© 2026 邱仕邦 Shibang Qiu</span>
     <span>Powered by GitHub Pages</span>
   </div>
 </footer>
@@ -414,20 +410,22 @@
 <script>
 /* 导航高亮 */
 (function () {
-  var links = document.querySelectorAll('.site-nav a[data-sec]');
+  var links = document.querySelectorAll('.site-nav a[href^="#"]');
   var secs = [];
-  links.forEach(function (a) { var s = document.getElementById(a.dataset.sec); if (s) secs.push(s); });
+  links.forEach(function (a) {
+    var s = document.getElementById(a.getAttribute('href').slice(1));
+    if (s) secs.push({ a: a, s: s });
+  });
   if (!('IntersectionObserver' in window) || !secs.length) return;
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (e.isIntersecting) {
-        links.forEach(function (l) {
-          l.classList.toggle('active', l.dataset.sec === e.target.id);
-        });
+        links.forEach(function (l) { l.classList.remove('active'); });
+        secs.forEach(function (p) { if (p.s === e.target) p.a.classList.add('active'); });
       }
     });
-  }, { rootMargin: '-30% 0px -60% 0px' });
-  secs.forEach(function (s) { io.observe(s); });
+  }, { rootMargin: '-25% 0px -65% 0px' });
+  secs.forEach(function (p) { io.observe(p.s); });
 })();
 </script>
 </body>
