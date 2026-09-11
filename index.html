@@ -103,6 +103,15 @@
   .entry { margin-bottom: 26px; }
   .entry h3 { font-size: 17px; font-weight: 750; color: var(--text-strong); margin-bottom: 6px; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
   .entry h3 .en { font-family: var(--mono); font-size: 12px; color: var(--text-3); font-weight: 500; }
+  .entry h3 .corner {
+    margin-left: auto; display: inline-flex; align-items: center; gap: 5px;
+    font-size: 12.5px; font-family: var(--mono); font-weight: 600; color: var(--link);
+    background: #eef4ff; border: 1px solid #d8e4fa; border-radius: 7px; padding: 2.5px 11px;
+    text-decoration: none; white-space: nowrap; transition: all .2s;
+  }
+  .entry h3 a.corner:hover { background: var(--link); color: #fff; border-color: var(--link); text-decoration: none; }
+  .entry h3 .corner.dl { color: #9a6a1a; background: #fdf5e6; border-color: #f0e2c4; }
+  .entry h3 a.corner.dl:hover { background: #b45309; color: #fff; border-color: #b45309; }
   .entry p { font-size: 14.5px; text-align: justify; margin-bottom: 8px; }
   .entry p b { color: var(--text-strong); }
   .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
@@ -267,7 +276,7 @@
       <h2 class="sec">🤖 产品与智能体</h2>
 
       <div class="entry">
-        <h3>OpenCareer <span class="badge green">已上线</span><span class="badge amber">私有仓库</span><span class="en">openworker-career · 独立开发</span></h3>
+        <h3>OpenCareer <span class="badge green">已上线</span><span class="badge amber">私有仓库</span><span class="en">openworker-career · 独立开发</span><a class="corner" href="https://app.opencareer.online/" target="_blank" rel="noopener">🚀 app.opencareer.online ↗</a></h3>
         <p>
           面向 AI / 互联网岗位的<b>一体化求职 Agent</b>：
           接入 <b>34 个官方公开招聘源</b>，聚合近 <b>3 万条活跃岗位</b>并每日更新；设计岗位雷达、多简历求职档案、
@@ -293,9 +302,6 @@
             </a>
             <figcaption>求职 Agent · 对话式完成 JD 分析 / 简历诊断 / 模拟面试</figcaption>
           </figure>
-        </div>
-        <div class="links" style="margin-top:8px; font-size:13.5px;">
-          <a href="https://app.opencareer.online/" target="_blank" rel="noopener">app.opencareer.online</a>
         </div>
       </div>
 
@@ -334,8 +340,10 @@
       </div>
 
       <div class="entry">
-        <h3><a href="https://github.com/qiushibang/feishu-room-booking" target="_blank" rel="noopener">feishu-room-booking</a><span class="en">Python · Claude Skill</span></h3>
-        <p>飞书会议室智能查询与预订：覆盖全球 130+ 工区、7300+ 会议室，10 线程并行查询，自动预订 + RSVP 校验 + 偏好自学习。ClawHub 下载 1.1k+。</p>
+        <h3><a href="https://github.com/qiushibang/feishu-room-booking" target="_blank" rel="noopener">feishu-room-booking</a><span class="en">Python · Claude Skill</span><a class="corner dl" href="https://clawhub.ai/skills/skills/feishu-room-booking" target="_blank" rel="noopener">⬇ 1.1k+ 下载</a></h3>
+        <p>飞书会议室智能查询与预订：覆盖全球 130+ 工区、7300+ 会议室，10 线程并行查询，自动预订 + RSVP 校验 + 偏好自学习。</p>
+        <h3><a href="https://clawhub.ai/skills/skills/bytetech" target="_blank" rel="noopener">ByteTech</a><span class="en">ClawHub Skill · 内容抓取</span><a class="corner dl" href="https://clawhub.ai/skills/skills/bytetech" target="_blank" rel="noopener">⬇ 660+ 下载</a></h3>
+        <p>ByteTech 技术文章抓取技能：获取文章元信息、目录结构与正文内容，基于 Chrome DevTools MCP 直连本地浏览器。</p>
         <h3><a href="https://github.com/qiushibang/tika-rag-skill" target="_blank" rel="noopener">tika-rag-skill</a><span class="en">Python · 企业 RAG</span></h3>
         <p>将 Tika 企业知识库接入 AI 编程助手：零依赖安装、SSE 流式响应、双通道混合检索。</p>
         <h3><a href="https://github.com/qiushibang/doc-to-board" target="_blank" rel="noopener">doc-to-board</a><span class="en">Shell · 飞书技能</span></h3>
