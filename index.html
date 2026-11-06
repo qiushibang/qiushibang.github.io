@@ -1,440 +1,765 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>邱仕邦 Shibang Qiu</title>
-<meta name="description" content="邱仕邦（Shibang Qiu）：北京航空航天大学硕士在读，AI Agent 工程师，Physica A 论文作者，ClawHub 技能发布者，OpenCareer 独立开发者。">
-<meta property="og:title" content="邱仕邦 Shibang Qiu">
-<meta property="og:description" content="AI Agent 工程师 · 复杂网络研究者 · Physica A 论文作者">
-<meta property="og:type" content="profile">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%232f6bd8'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' text-anchor='middle' fill='%23fff'%3EQ%3C/text%3E%3C/svg%3E">
-<style>
-  :root {
-    --bg: #ffffff;
-    --text: #40474f;
-    --text-strong: #262b31;
-    --text-3: #8a93a0;
-    --line: #e8eaee;
-    --link: #2f6bd8;
-    --link-line: rgba(47,107,216,.35);
-    --serif: Georgia, "Times New Roman", "Songti SC", "SimSun", serif;
-    --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "HarmonyOS Sans SC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
-    --mono: "SF Mono", ui-monospace, "JetBrains Mono", Consolas, monospace;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
-  body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 15.5px; line-height: 1.9; -webkit-font-smoothing: antialiased; }
-  a { color: var(--link); text-decoration: underline; text-decoration-color: var(--link-line); text-underline-offset: 3px; transition: text-decoration-color .2s; }
-  a:hover { text-decoration-color: var(--link); }
-  ::selection { background: rgba(47,107,216,.15); }
-  img { max-width: 100%; height: auto; }
+<!doctype html>
+<html lang="zh-CN" data-type="service" data-radius="sharp" data-motion>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>邱仕邦 Shibang Qiu</title>
+    <meta
+      name="description"
+      content="邱仕邦的智能体产品与开源作品。查看 OpenCareer 求职工作台、真实项目编程模型评测，以及飞书多维表格智能体的产品与评测经历。"
+    />
+    <meta property="og:title" content="邱仕邦 Shibang Qiu" />
+    <meta
+      property="og:description"
+      content="邱仕邦的智能体产品与开源作品。查看 OpenCareer 求职工作台、真实项目编程模型评测，以及飞书多维表格智能体的产品与评测经历。"
+    />
+    <meta property="og:type" content="profile" />
 
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
-
-  /* ---------- 顶部导航（仿 academicpages masthead） ---------- */
-  .masthead {
-    position: sticky; top: 0; z-index: 50;
-    background: rgba(255,255,255,.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line);
-  }
-  .masthead-inner { display: flex; align-items: baseline; gap: 6px; height: 62px; overflow-x: auto; scrollbar-width: none; }
-  .masthead-inner::-webkit-scrollbar { display: none; }
-  .site-nav { display: flex; align-items: baseline; gap: 4px; }
-  .site-nav a {
-    color: var(--text); text-decoration: none; font-size: 14.5px;
-    padding: 4px 12px; border-radius: 6px; white-space: nowrap; transition: background .2s, color .2s;
-  }
-  .site-nav a:hover { color: var(--link); background: rgba(47,107,216,.06); }
-  .site-nav a.active { color: var(--link); }
-  .site-nav a.nav-home { font-size: 19px; font-weight: 700; margin-right: 14px; }
-
-  /* ---------- 布局：左栏 + 内容 ---------- */
-  .page { display: grid; grid-template-columns: 232px minmax(0, 1fr); gap: 48px; padding-top: 44px; padding-bottom: 30px; }
-
-  /* ---------- 侧栏 ---------- */
-  .sidebar { position: sticky; top: 86px; align-self: start; }
-  .sidebar .avatar { width: 172px; height: 172px; border-radius: 50%; object-fit: cover; display: block; border: 1px solid var(--line); }
-  .sidebar h1 { font-family: var(--serif); font-size: 27px; font-weight: 800; color: var(--text-strong); margin: 16px 0 2px; letter-spacing: .5px; }
-  .sidebar .handle { font-family: var(--mono); font-size: 12.5px; color: var(--text-3); margin-bottom: 10px; }
-  .sidebar .titles { font-size: 14px; color: var(--text); line-height: 1.95; margin-bottom: 14px; }
-  .side-links { list-style: none; font-size: 14px; }
-  .side-links li { margin: 3px 0; }
-  .side-links a { display: inline-flex; align-items: center; gap: 8px; color: var(--text); }
-  .side-links a:hover { color: var(--link); }
-  .side-links svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
-  .side-links .ico { display: inline-block; width: 15px; text-align: center; flex-shrink: 0; }
-
-  /* ---------- 内容 ---------- */
-  .content { min-width: 0; padding-bottom: 30px; }
-  section { margin-bottom: 46px; scroll-margin-top: 84px; }
-  h2.sec {
-    font-size: 21px; font-weight: 750; color: var(--text-strong); letter-spacing: .3px;
-    padding-bottom: 10px; border-bottom: 1px solid var(--line); margin-bottom: 18px;
-  }
-
-  .bio p { margin-bottom: 12px; text-align: justify; }
-  .bio b { color: var(--text-strong); }
-
-  /* 时间线 bullet（仿学术站条目） */
-  .tl { list-style: none; }
-  .tl > li { position: relative; padding-left: 20px; margin-bottom: 12px; }
-  .tl > li::before { content: "•"; position: absolute; left: 4px; color: var(--text-3); }
-  .tl .date { font-family: var(--mono); font-weight: 700; color: var(--text-strong); font-size: 14px; }
-  .tl .role { font-weight: 700; color: var(--text-strong); }
-  .sub { list-style: none; margin-top: 6px; }
-  .sub li { position: relative; padding-left: 18px; font-size: 14.2px; color: var(--text); margin-bottom: 5px; text-align: justify; }
-  .sub li::before { content: "–"; position: absolute; left: 2px; color: var(--text-3); }
-  .sub b { color: var(--text-strong); }
-
-  /* 论文 */
-  .pub .title { font-family: var(--serif); font-size: 17px; font-weight: 700; line-height: 1.6; color: var(--text-strong); }
-  .pub .authors { font-size: 14px; margin: 6px 0 2px; }
-  .pub .authors .me { font-weight: 700; color: var(--text-strong); }
-  .pub .venue { font-size: 14px; font-style: italic; color: var(--text); margin-bottom: 8px; }
-  .pub .note { font-size: 14.2px; margin-bottom: 10px; text-align: justify; }
-  .pub .links { font-size: 13.5px; }
-  .badge { display: inline-block; font-size: 11px; font-family: var(--mono); font-weight: 600; padding: 1px 8px; border-radius: 5px; vertical-align: 2px; }
-  .badge.blue { color: #2f6bd8; background: #eef4ff; border: 1px solid #d8e4fa; }
-  .badge.amber { color: #9a6a1a; background: #fdf5e6; border: 1px solid #f0e2c4; }
-  .badge.green { color: #1a7a52; background: #ecf8f2; border: 1px solid #cbeddd; }
-
-  /* 项目条目 */
-  .entry { margin-bottom: 26px; }
-  .entry h3 { font-size: 17px; font-weight: 750; color: var(--text-strong); margin-bottom: 6px; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
-  .entry h3 .en { font-family: var(--mono); font-size: 12px; color: var(--text-3); font-weight: 500; }
-  .entry h3 .corner {
-    margin-left: auto; display: inline-flex; align-items: center; gap: 5px;
-    font-size: 12.5px; font-family: var(--mono); font-weight: 600; color: var(--link);
-    background: #eef4ff; border: 1px solid #d8e4fa; border-radius: 7px; padding: 2.5px 11px;
-    text-decoration: none; white-space: nowrap; transition: all .2s;
-  }
-  .entry h3 a.corner:hover { background: var(--link); color: #fff; border-color: var(--link); text-decoration: none; }
-  .entry h3 .corner.dl { color: #9a6a1a; background: #fdf5e6; border-color: #f0e2c4; }
-  .entry h3 a.corner.dl:hover { background: #b45309; color: #fff; border-color: #b45309; }
-  .entry p { font-size: 14.5px; text-align: justify; margin-bottom: 8px; }
-  .entry p b { color: var(--text-strong); }
-  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
-  .tag { font-size: 11.5px; font-family: var(--mono); color: #5c6570; background: #f4f6f8; border: 1px solid var(--line); padding: 1px 9px; border-radius: 5px; }
-
-  /* 截图排版 */
-  .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0 6px; }
-  .shots figure { margin: 0; }
-  .shots a { display: block; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 1px 3px rgba(20,30,45,.06), 0 8px 24px rgba(20,30,45,.07); transition: box-shadow .25s, transform .25s; }
-  .shots a:hover { box-shadow: 0 2px 6px rgba(20,30,45,.08), 0 14px 34px rgba(20,30,45,.12); transform: translateY(-2px); }
-  .shots img { display: block; width: 100%; }
-  .shots figcaption { font-size: 12.5px; color: var(--text-3); text-align: center; margin-top: 8px; font-family: var(--mono); }
-
-  .claw-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 26px; align-items: center; }
-  .claw-grid .txt p { font-size: 14.5px; text-align: justify; margin-bottom: 10px; }
-  .claw-grid .txt b { color: var(--text-strong); }
-  .claw-grid .dl { font-family: var(--mono); font-weight: 700; color: #2f6bd8; }
-  .claw-shot { border-radius: 12px; border: 1px solid var(--line); box-shadow: 0 1px 3px rgba(20,30,45,.06), 0 10px 30px rgba(20,30,45,.09); display: block; overflow: hidden; transition: box-shadow .25s, transform .25s; }
-  .claw-shot:hover { box-shadow: 0 2px 6px rgba(20,30,45,.08), 0 16px 40px rgba(20,30,45,.13); transform: translateY(-2px); }
-  .claw-shot img { display: block; width: 100%; }
-
-  /* 技能 */
-  .skill-group { margin-bottom: 14px; }
-  .skill-group h3 { font-size: 15px; font-weight: 700; color: var(--text-strong); margin-bottom: 6px; }
-
-  footer { border-top: 1px solid var(--line); margin-top: 20px; }
-  .foot-inner { max-width: 1120px; margin: 0 auto; padding: 20px 24px 34px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: var(--text-3); }
-
-  /* ---------- 响应式（仿参考站：窄屏单栏，头像+姓名横排） ---------- */
-  @media (max-width: 880px) {
-    .page { grid-template-columns: 1fr; gap: 24px; padding-top: 26px; }
-    .masthead-inner { height: 54px; }
-    .site-nav a { font-size: 13px; padding: 4px 9px; }
-    .site-nav a.nav-home { font-size: 16px; margin-right: 6px; }
-    .sidebar { position: static; display: grid; grid-template-columns: 116px minmax(0,1fr); column-gap: 20px; align-items: center; }
-    .sidebar .avatar { width: 116px; height: 116px; grid-row: 1 / span 3; }
-    .sidebar h1 { margin-top: 0; font-size: 23px; }
-    .sidebar .handle { margin-bottom: 6px; }
-    .sidebar .titles { display: none; }
-    .side-links { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px 18px; border-top: 1px solid var(--line); padding-top: 12px; }
-    .side-links li { margin: 0; }
-    .content { padding-bottom: 10px; }
-    section { margin-bottom: 38px; }
-    .shots { grid-template-columns: 1fr; }
-    .claw-grid { grid-template-columns: 1fr; }
-  }
-</style>
-</head>
-<body>
-
-<header class="masthead">
-  <div class="wrap masthead-inner">
-    <nav class="site-nav">
-      <a class="nav-home" href="#about">关于我</a>
-      <a href="#edu">学历</a>
-      <a href="#work">实习</a>
-      <a href="#pubs">学术</a>
-      <a href="#products">产品</a>
-      <a href="#opensource">开源</a>
-      <a href="#clawhub">ClawHub</a>
-      <a href="#skills">技能</a>
-    </nav>
-  </div>
-</header>
-
-<div class="wrap page">
-
-  <!-- ============ 侧栏 ============ -->
-  <aside class="sidebar">
-    <img class="avatar" src="avatar.jpg" alt="邱仕邦" width="172" height="172">
-    <h1>邱仕邦</h1>
-    <div class="handle">Shibang Qiu · @qiushibang</div>
-    <div class="titles">
-      北京航空航天大学 · 硕士在读<br>
-      AI Agent 工程师<br>
-      <i>Physica A</i>（Elsevier）论文作者<br>
-      ClawHub 技能发布者
-    </div>
-    <ul class="side-links">
-      <li><a href="mailto:2294437194@qq.com"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 5.1-8-5.1V6.29l8 5.1 8-5.1v1.95z"/></svg>Email</a></li>
-      <li><a href="https://github.com/qiushibang" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>GitHub</a></li>
-      <li><a href="https://clawhub.ai/qiushibang" target="_blank" rel="noopener"><span class="ico">🦞</span>ClawHub</a></li>
-      <li><a href="https://app.opencareer.online/" target="_blank" rel="noopener"><span class="ico">🚀</span>OpenCareer</a></li>
-      <li><a href="https://www.sciencedirect.com/science/article/pii/S0378437126007405" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 12h8v2H8v-2zm0 4h8v2H8v-2z"/></svg>论文</a></li>
-    </ul>
-  </aside>
-
-  <!-- ============ 内容 ============ -->
-  <main class="content">
-
-    <section id="about">
-      <div class="bio">
-        <p>
-          <b>邱仕邦</b>，北京航空航天大学工业工程与管理硕士在读（推免），AI Agent 工程师，AI、工程、研究复合背景。
-          专注多智能体系统与企业级 RAG 的产品落地：独立开发已上线的求职 Agent <a href="https://app.opencareer.online/" target="_blank" rel="noopener">OpenCareer</a>；
-          在 <i>Physica A</i>（Elsevier）发表供应链网络研究；技能作品发布于 ClawHub，累计下载 <b>1.8k+</b>。
+    <meta name="page-type" content="service" />
+    <meta name="site-kind" content="other" />
+    <meta name="theme-color" content="#f7f5ee" />
+    <link rel="icon" href="assets/monogram.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/taste/motion.css" />
+    <link rel="stylesheet" href="assets/portfolio.css" />
+  </head>
+  <body id="top">
+    <a class="skip" href="#main">跳至正文</a>
+    <header class="topbar">
+      <div class="nav-inner">
+        <a class="mast-brand" href="#top"
+          ><img
+            src="assets/profile-small.webp"
+            width="34"
+            height="34"
+            alt=""
+          /><span>邱仕邦<small>个人主页</small></span></a
+        >
+        <nav class="contents" aria-label="页内目录">
+          <a href="#about">关于我</a><a href="#products">产品项目</a
+          ><a href="#work">实习经历</a><a href="#opensource">开源作品</a
+          ><a href="#clawhub">ClawHub</a><a href="#edu">教育与研究</a>
+        </nav>
+        <details class="menu">
+          <summary>目录</summary>
+          <nav aria-label="移动端目录">
+            <a href="#about">关于我</a><a href="#products">产品项目</a
+            ><a href="#work">实习经历</a><a href="#opensource">开源作品</a
+            ><a href="#clawhub">ClawHub</a><a href="#edu">教育与研究</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+    <div class="portfolio">
+      <aside id="profile" class="identity" aria-label="个人信息">
+        <img
+          class="life-photo"
+          src="assets/life-photo-600.webp"
+          srcset="assets/life-photo-600.webp 600w, assets/life-photo.webp 900w"
+          sizes="(max-width:700px) 92vw, (max-width:960px) 205px, 310px"
+          width="900"
+          height="600"
+          alt="邱仕邦的生活照"
+          fetchpriority="high"
+          loading="lazy"
+        />
+        <div class="name">
+          <h1>邱仕邦</h1>
+          <span lang="en">Shibang Qiu</span>
+        </div>
+        <p class="affiliation">
+          北京航空航天大学<br />工业工程与管理 · 硕士在读
         </p>
-      </div>
-    </section>
-
-    <section id="edu">
-      <h2 class="sec">📖 学历</h2>
-      <ul class="tl">
-        <li>
-          <span class="date">2025.09 - 2028.06</span>, <span class="role">硕士（推免）</span>, 北京航空航天大学, 工业工程与管理.
-        </li>
-        <li>
-          <span class="date">2021.09 - 2025.06</span>, <span class="role">学士</span>, 北京航空航天大学, 工业工程. GPA 3.83/4.00.
-        </li>
-      </ul>
-    </section>
-
-    <section id="work">
-      <h2 class="sec">💼 实习经历</h2>
-      <ul class="tl">
-        <li>
-          <span class="date">2026.06 - 至今</span>, <span class="role">产品经理</span>, Lark Base AI · 多维表格智能体, 字节跳动, 北京.
-          <ul class="sub">
-            <li>需求 owner，主导 <b>5 项功能</b>从需求定义、方案设计到上线全量的完整迭代；实测 8 款办公 Agent（WorkBuddy / QwenWork / Kimi Work / GenSpark 等），提炼「交互-能力-沉淀-集成-基座」五层框架，定位多维表格智能体的能力差距。</li>
-            <li><b>Trigger 数据分析与归因</b>：清洗 8,664 条未执行明细、回看执行 trace，发现 46% 异常 case 存在有效条件缺失；提出 AI/手动配置双向切换与自然语言生成结构化条件，任务执行成功率 <b>+10%</b>。</li>
-            <li><b>意图路由（Decision Agent）</b>：负责意图分发链路的产品设计与上线（Workflow 编排 + Agent Harness：强制意图直连、SpecDoc 状态判定、拒识回流重分配），配套 9×12×2 路由评测方案完成验收。</li>
-          </ul>
-        </li>
-        <li>
-          <span class="date">2026.03 - 2026.06</span>, <span class="role">AI Coding / Agent Skill 产品与开发</span>, TikTok 研发 · PMO, 字节跳动, 北京.
-          <ul class="sub">
-            <li><b>团队知识库</b>：面向 PMO 沉淀的 1000+ 项目文档构建团队级 RAG 知识库，完成多源文档解析清洗、语义检索与答案溯源链路。</li>
-            <li><b>Agent Skills</b>：基于 OpenClaw、Hermes 等设计开发 <b>10+ Skills</b>（项目管理、会议室预订、多文档处理、知识检索、浏览器自动化），通用能力开源至 ClawHub，累计下载 <b>1.8k+</b>。</li>
-            <li><b>Meego 项目管理增强</b>：打通需求看板，将工作项、状态、排期等封装为 Agent 可调用能力，实现自然语言复杂查询；开发 Skill Creator Pro 标准化 Skill 开发交付流程。</li>
-            <li><b>技术影响力</b>：持续在字节内部技术社区 ByteTech 输出 AI / Agent 内容，<b>4 次登上首页文章周榜</b>，获评「AI 知识达人」（社区 Top 3%）。</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-
-    <section id="pubs">
-      <h2 class="sec">📄 学术论文</h2>
-      <div class="pub">
-        <div class="title">
-          <a href="https://www.sciencedirect.com/science/article/pii/S0378437126007405" target="_blank" rel="noopener">
-            Uncovering Hidden Bottlenecks in Aircraft Manufacturing Supply Chain Networks: A Structural-Constrained Asymmetric Analysis Approach
-          </a>
-          <span class="badge blue">SCI</span>
+        <div class="contact-links">
+          <a href="https://github.com/qiushibang" target="_blank" rel="noopener"
+            >GitHub ↗</a
+          ><a href="mailto:2294437194@qq.com">邮件联系 ↗</a
+          ><a
+            href="https://clawhub.ai/qiushibang"
+            target="_blank"
+            rel="noopener"
+            >ClawHub ↗</a
+          >
         </div>
-        <div class="authors">
-          Chen Wang, Bing Zhang, <span class="me">Shibang Qiu</span>, Yue Shi, Hua Zhang, Wenyan Song
-        </div>
-        <div class="venue">Physica A: Statistical Mechanics and its Applications, Elsevier, 2026.</div>
-        <div class="note">
-          提出结构约束不对称分析（SCAA）方法：以 FactSet 刻画有向供应链结构、GDELT 媒体共现信号刻画信息暴露，
-          与 DEMATEL / WINGS / HISA 系统对比，经 100 次重复 Monte Carlo 扰动验证稳健性，识别出传统对称分析遗漏的隐性瓶颈节点，为供应链中断提供早期预警工具。
-        </div>
-        <div class="links">
-          <a href="https://www.sciencedirect.com/science/article/pii/S0378437126007405" target="_blank" rel="noopener">ScienceDirect 全文</a>
-          &nbsp;·&nbsp;
-          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6625482" target="_blank" rel="noopener">SSRN 预印本</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="products">
-      <h2 class="sec">🤖 产品与智能体</h2>
-
-      <div class="entry">
-        <h3>OpenCareer <span class="badge green">已上线</span><span class="badge amber">私有仓库</span><span class="en">openworker-career · 独立开发</span><a class="corner" href="https://app.opencareer.online/" target="_blank" rel="noopener">🚀 app.opencareer.online ↗</a></h3>
-        <p>
-          面向 AI / 互联网岗位的<b>一体化求职 Agent</b>：
-          接入 <b>34 个官方公开招聘源</b>，聚合近 <b>3 万条活跃岗位</b>并每日更新；设计岗位雷达、多简历求职档案、
-          证据化简历诊断与 JD / 已确认简历驱动的多轮模拟面试，形成「岗位发现 — JD 分析 — 简历诊断 — 申请跟踪 — 模拟面试 — 复盘」闭环；
-          通过官方来源追溯、简历事实确认、敏感数据隔离与关键写操作确认，降低模型幻觉与隐私风险。
-          不依赖 LangChain / LangGraph，基于<b>自研 TurnEngine 运行时</b>：discuss / plan / approval 三模式权限引擎，
-          原生多模型路由（OpenAI / Claude / Gemini / Bedrock），职业能力封装为 MCP Server 工具层，RapidOCR + ONNX 本地离线识别。
-        </p>
-        <div class="tags">
-          <span class="tag">自研 Agent 运行时</span><span class="tag">MCP Server</span><span class="tag">多模型路由</span>
-          <span class="tag">FastAPI</span><span class="tag">RapidOCR / ONNX</span><span class="tag">Playwright</span><span class="tag">Tauri</span>
-        </div>
-        <div class="shots">
-          <figure>
-            <a href="assets/opencareer-jobs.png" target="_blank" rel="noopener">
-              <img src="assets/opencareer-jobs.png" alt="OpenCareer 岗位雷达" width="1800" height="851" loading="lazy">
-            </a>
-            <figcaption>岗位雷达 · 34 个官方招聘源 · 30,169 条活跃岗位</figcaption>
-          </figure>
-          <figure>
-            <a href="assets/opencareer-agent.png" target="_blank" rel="noopener">
-              <img src="assets/opencareer-agent.png" alt="OpenCareer 求职 Agent 主界面" width="1800" height="840" loading="lazy">
-            </a>
-            <figcaption>求职 Agent · 对话式完成 JD 分析 / 简历诊断 / 模拟面试</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="entry">
-        <h3>TRIZ-Copilot <span class="badge amber">私有仓库</span><span class="en">auto-triz</span></h3>
-        <p>
-          面向复杂产品创新设计的 <b>TRIZ 多智能体协同创新平台</b>：
-          Gatekeeper 多轮澄清工程问题，Planner-Executor 拆分四阶段 TRIZ 推理（问题分析 / 问题模型 / 理想解与矛盾 / 方案生成），
-          最终方案引入 <b>Patent RAG</b> 专利知识检索提供工程依据，用户反馈可定位回退阶段、迭代重生成，全程报告可编辑、可追溯。
-        </p>
-        <div class="tags">
-          <span class="tag">Next.js 16</span><span class="tag">React 19</span><span class="tag">TypeScript</span>
-          <span class="tag">DeepSeek</span><span class="tag">Supabase</span><span class="tag">Patent RAG</span>
-        </div>
-      </div>
-
-      <div class="entry">
-        <h3>低空经济供应链智能体 <span class="en">中航工业无人机所 · 2024.10 - 2025.03</span></h3>
-        <p>
-          针对低空经济供应链关系多层级、异构化，传统 RAG 无法处理复杂长链检索的痛点：
-          基于 <b>LightRAG / GraphRAG</b> 二次开发，构建供应链领域知识图谱，优化图检索路径与 LLM 生成的对齐机制。
-          有效抑制复杂关系检索中的幻觉，实现供应链风险智能识别与节点关联分析，覆盖 5 类风险场景，检索准确率 <b>+30%</b>。
-        </p>
-        <div class="tags">
-          <span class="tag">GraphRAG</span><span class="tag">LightRAG</span><span class="tag">知识图谱</span><span class="tag">Neo4j</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="opensource">
-      <h2 class="sec">🔧 开源项目</h2>
-
-      <div class="entry">
-        <h3><a href="https://github.com/qiushibang/duo-shiguang-wechat-mini-program" target="_blank" rel="noopener">双人食光</a><span class="en">微信小程序 · TypeScript</span></h3>
-        <p>以饮食分享为入口的双人生活记录小程序——把两个人的每一顿饭，变成共同的生活日志。</p>
-      </div>
-
-      <div class="entry">
-        <h3><a href="https://clawhub.ai/qiushibang/skills/feishu-room-booking" target="_blank" rel="noopener">feishu-room-booking</a><span class="en">Python · Claude Skill · <a href="https://github.com/qiushibang/feishu-room-booking" target="_blank" rel="noopener">GitHub</a></span><a class="corner dl" href="https://clawhub.ai/qiushibang/skills/feishu-room-booking" target="_blank" rel="noopener">⬇ 1.1k+ 下载</a></h3>
-        <p>飞书会议室智能查询与预订：覆盖全球 130+ 工区、7300+ 会议室，10 线程并行查询，自动预订 + RSVP 校验 + 偏好自学习。</p>
-        <h3><a href="https://clawhub.ai/qiushibang/skills/bytetech" target="_blank" rel="noopener">ByteTech</a><span class="en">ClawHub Skill · 内容抓取</span><a class="corner dl" href="https://clawhub.ai/qiushibang/skills/bytetech" target="_blank" rel="noopener">⬇ 660+ 下载</a></h3>
-        <p>ByteTech 技术文章抓取技能：获取文章元信息、目录结构与正文内容，基于 Chrome DevTools MCP 直连本地浏览器。</p>
-        <h3><a href="https://github.com/qiushibang/tika-rag-skill" target="_blank" rel="noopener">tika-rag-skill</a><span class="en">Python · 企业 RAG</span></h3>
-        <p>将 Tika 企业知识库接入 AI 编程助手：零依赖安装、SSE 流式响应、双通道混合检索。</p>
-        <h3><a href="https://github.com/qiushibang/doc-to-board" target="_blank" rel="noopener">doc-to-board</a><span class="en">Shell · 飞书技能</span></h3>
-        <p>解析飞书文档为结构化大纲，自动生成排版精美的白板。</p>
-      </div>
-
-      <div class="entry">
-        <h3><a href="https://github.com/qiushibang/skill-creator-pro" target="_blank" rel="noopener">skill-creator-pro</a><span class="en">Python · Skill 自动开发</span></h3>
-        <p>多 Agent 单包 Skill 自动开发器：需求澄清 → 计划确认 → TDD / verify 驱动开发 → 安全评审收口 → 飞书指南、画板与安装包交付。</p>
-        <h3><a href="https://github.com/qiushibang/ai-hot" target="_blank" rel="noopener">ai-hot</a><span class="en">Chrome 扩展 · React 19</span></h3>
-        <p>新标签页聚合 GitHub / X / YouTube / HuggingFace 的 AI 热门内容，一键推送飞书与企业微信。</p>
-        <h3><a href="https://github.com/qiushibang/trending-hub" target="_blank" rel="noopener">trending-hub</a><span class="en">Node.js · 数据聚合</span></h3>
-        <p>实时聚合 GitHub、Twitter/X 与内部技术社区的每日热点。</p>
-      </div>
-    </section>
-
-    <section id="clawhub">
-      <h2 class="sec">🦞 ClawHub</h2>
-      <div class="claw-grid">
-        <div class="txt">
+      </aside>
+      <main id="main">
+        <section id="about" class="intro">
+          <h2>智能体产品与开发</h2>
           <p>
-            技能作品发布于 <a href="https://clawhub.ai/qiushibang" target="_blank" rel="noopener"><b>ClawHub</b></a>
-            —— OpenClaw 智能体生态的技能分发平台（面向 AI Agent 的「npm」），累计下载 <span class="dl">1.8k+</span>：
+            我在字节跳动做过飞书多维表格智能体的意图路由、产品设计和评测。工作之外，我开发了开源求职工作台
+            OpenCareer，也把日常用到的办公流程做成了智能体技能。
           </p>
-          <ul class="sub">
-            <li><b>Feishu Room Booking</b> · 飞书会议室查询、预订与配置技能，下载 1.1k+</li>
-            <li><b>ByteTech</b> · 技术文章元信息、目录与正文抓取技能，下载 660+</li>
-          </ul>
-          <p style="margin-top:10px;">与实习中开发的 10+ Agent Skills 一脉相承，把高频办公流程封装为可复用的 AI 能力。</p>
-        </div>
-        <a class="claw-shot" href="https://clawhub.ai/qiushibang" target="_blank" rel="noopener">
-          <img src="assets/clawhub-profile.png" alt="ClawHub 主页：1.8k downloads" width="1800" height="939" loading="lazy">
-        </a>
-      </div>
-    </section>
-
-    <section id="skills">
-      <h2 class="sec">🛠 技能</h2>
-      <div class="skill-group">
-        <h3>🤖 AI 与 Agent</h3>
-        <div class="tags">
-          <span class="tag">Agent Harness</span><span class="tag">多智能体编排</span><span class="tag">RAG / GraphRAG</span>
-          <span class="tag">Agent Skill</span><span class="tag">MCP</span><span class="tag">意图路由 / Decision Agent</span><span class="tag">AI Coding</span><span class="tag">Prompt 工程</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3>💻 工程</h3>
-        <div class="tags">
-          <span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">SQL</span>
-          <span class="tag">Next.js / React</span><span class="tag">Node.js</span><span class="tag">FastAPI</span>
-          <span class="tag">SQLite</span><span class="tag">Neo4j</span><span class="tag">Chrome 扩展</span><span class="tag">微信小程序</span><span class="tag">Tauri</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3>🎯 产品与设计</h3>
-        <div class="tags">
-          <span class="tag">Figma</span><span class="tag">需求分析 / PRD</span><span class="tag">数据分析与归因</span><span class="tag">竞争调研</span><span class="tag">复杂网络分析（SCAA / DEMATEL / WINGS）</span>
-        </div>
-      </div>
-    </section>
-
-  </main>
-</div>
-
-<footer>
-  <div class="foot-inner">
-    <span>© 2026 邱仕邦 Shibang Qiu</span>
-    <span>Powered by GitHub Pages</span>
-  </div>
-</footer>
-
-<script>
-/* 导航高亮 */
-(function () {
-  var links = document.querySelectorAll('.site-nav a[href^="#"]');
-  var secs = [];
-  links.forEach(function (a) {
-    var s = document.getElementById(a.getAttribute('href').slice(1));
-    if (s) secs.push({ a: a, s: s });
-  });
-  if (!('IntersectionObserver' in window) || !secs.length) return;
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) {
-        links.forEach(function (l) { l.classList.remove('active'); });
-        secs.forEach(function (p) { if (p.s === e.target) p.a.classList.add('active'); });
-      }
-    });
-  }, { rootMargin: '-25% 0px -65% 0px' });
-  secs.forEach(function (p) { io.observe(p.s); });
-})();
-</script>
-</body>
+        </section>
+        <section id="products" class="chapter">
+          <h2>产品项目</h2>
+          <article class="primary-project">
+            <div class="product-heading">
+              <div>
+                <h3>OpenCareer</h3>
+                <p>面向 AI 和互联网岗位的开源求职工作台</p>
+              </div>
+              <a
+                href="https://app.opencareer.online/"
+                class="btn btn--primary"
+                target="_blank"
+                rel="noopener"
+                >在线体验 ↗</a
+              >
+            </div>
+            <div class="demo">
+              <h4>开源版功能展示</h4>
+              <div class="tabs" role="tablist" aria-label="开源版功能">
+                <button
+                  type="button"
+                  role="tab"
+                  id="tab-subscribe"
+                  aria-controls="panel-subscribe"
+                  aria-selected="true"
+                  tabindex="0"
+                >
+                  筛选与订阅</button
+                ><button
+                  type="button"
+                  role="tab"
+                  id="tab-prepare"
+                  aria-controls="panel-prepare"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  简历与面试</button
+                ><button
+                  type="button"
+                  role="tab"
+                  id="tab-apply"
+                  aria-controls="panel-apply"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  投递管理
+                </button>
+              </div>
+              <div class="stages">
+                <div
+                  class="demo-panel"
+                  role="tabpanel"
+                  tabindex="0"
+                  id="panel-subscribe"
+                  aria-labelledby="tab-subscribe"
+                >
+                  <div class="shot-caption">
+                    <p>按城市和岗位方向筛选，每天定时推送到飞书或钉钉。</p>
+                    <div>
+                      <a
+                        href="assets/demos/subscription-settings.webp"
+                        target="_blank"
+                        rel="noopener"
+                        >查看原图 ↗</a
+                      >
+                    </div>
+                  </div>
+                  <a
+                    class="demo-shot"
+                    href="assets/demos/subscription-settings.webp"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="放大查看：岗位订阅窗口中的北京产品实习筛选条件、发送时间和两个接收群"
+                    ><picture
+                      ><source
+                        media="(max-width: 700px)"
+                        srcset="assets/demos/subscription-phone.webp"
+                        width="812"
+                        height="1328" />
+                      <img
+                        src="assets/demos/subscription-settings.webp"
+                        alt="岗位订阅窗口中的北京产品实习筛选条件、发送时间和两个接收群"
+                        width="1312"
+                        height="1052"
+                        decoding="async" /></picture
+                  ></a>
+                </div>
+                <div
+                  class="demo-panel"
+                  role="tabpanel"
+                  tabindex="0"
+                  id="panel-prepare"
+                  aria-labelledby="tab-prepare"
+                  hidden
+                >
+                  <div class="shot-caption">
+                    <p>围绕目标岗位改简历，再用同一份简历练习模拟面试。</p>
+                    <div>
+                      <a
+                        href="assets/demos/resume-selection.webp"
+                        target="_blank"
+                        rel="noopener"
+                        >选择简历截图 ↗</a
+                      ><a
+                        href="assets/demos/interview-settings.webp"
+                        target="_blank"
+                        rel="noopener"
+                        >查看原图 ↗</a
+                      >
+                    </div>
+                  </div>
+                  <a
+                    class="demo-shot"
+                    href="assets/demos/interview-settings.webp"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="放大查看：模拟面试设置中的目标岗位、已选简历、时长与难度"
+                    ><img
+                      src="assets/demos/interview-settings.webp"
+                      alt="模拟面试设置中的目标岗位、已选简历、时长与难度"
+                      width="1024"
+                      height="624"
+                      decoding="async"
+                  /></a>
+                </div>
+                <div
+                  class="demo-panel"
+                  role="tabpanel"
+                  tabindex="0"
+                  id="panel-apply"
+                  aria-labelledby="tab-apply"
+                  hidden
+                >
+                  <div class="shot-caption">
+                    <p>在一张表里跟进每份申请，看到投递状态和面试轮次。</p>
+                    <div>
+                      <a
+                        href="assets/demos/application-window.webp"
+                        target="_blank"
+                        rel="noopener"
+                        >查看原图 ↗</a
+                      >
+                    </div>
+                  </div>
+                  <a
+                    class="demo-shot"
+                    href="assets/demos/application-window.webp"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="放大查看：求职进度表中的五条演示申请，覆盖准备投递、已投递、测评、二面和录用沟通"
+                    ><img
+                      src="assets/demos/application-tracker.webp"
+                      alt="求职进度表中的五条演示申请，覆盖准备投递、已投递、测评、二面和录用沟通"
+                      width="1540"
+                      height="1130"
+                      decoding="async"
+                  /></a>
+                </div>
+              </div>
+              <noscript
+                ><a href="assets/demos/interview-settings.webp">模拟面试截图</a>
+                ·
+                <a href="assets/demos/resume-selection.webp">简历诊断截图</a> ·
+                <a href="assets/demos/application-window.webp"
+                  >投递管理截图</a
+                ></noscript
+              >
+            </div>
+            <div class="project-foot">
+              <span>开源版界面 · 演示数据</span>
+              <div>
+                <a
+                  href="https://github.com/qiushibang/OpenCareer"
+                  target="_blank"
+                  rel="noopener"
+                  >开源仓库 ↗</a
+                >
+                <a
+                  href="https://github.com/qiushibang/OpenCareer/blob/main/docs/GETTING_STARTED.md"
+                  target="_blank"
+                  rel="noopener"
+                  >本地安装 ↗</a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="minor-project">
+            <h3>TRIZ-Copilot</h3>
+            <p>
+              工程创新设计原型。多个智能体分步澄清问题、分析技术矛盾，再结合专利检索生成可回溯的设计方案。
+            </p>
+          </article>
+        </section>
+        <section id="work" class="chapter">
+          <h2>实习经历</h2>
+          <p class="company">字节跳动</p>
+          <p>
+            <b>技术影响力：</b>持续在字节内部技术社区 ByteTech 输出 AI / Agent
+            技术内容，5 次登上首页文章周榜，获评「AI 知识达人」（社区 Top
+            3%），内容创作量超过 92% 平台创作者。
+          </p>
+          <article class="job">
+            <div class="job-title">
+              <h3>Lark Base AI·多维表格智能体 —— 产品经理</h3>
+              <span>2026.06 – 至今</span>
+            </div>
+            <p>
+              <b>背景：</b>多维表格承载用户的数据资产与业务系统，此前 AI
+              以建表、搭业务系统等功能嵌入，接不住用户的开放式 AI
+              诉求。目标：将其从特定场景的 AI
+              工具，改造为能理解意图、调度工具、持续执行的通用 Agent。
+            </p>
+            <p>
+              <b>我的职责：</b>需求 owner，主导 5
+              项功能从需求定义、方案设计到上线全量的完整迭代：
+            </p>
+            <p>
+              <b>赛道调研与差距定位：</b>实测 8 款办公 Agent（WorkBuddy /
+              QwenWork / Kimi Work / GenSpark 等），拆解记忆分层、上下文压缩与
+              Agent Harness
+              策略位，提炼「交互-能力-沉淀-集成-基座」五层框架；识别多维表格智能体在统一入口、意图路由、能力感知和持续任务上的差距，作为后续需求输入。
+            </p>
+            <p>
+              <b>意图路由 (Decision Agent)：</b>针对多能力 Agent
+              在复杂指令下存在错误路由与能力误调用的问题，负责意图分发链路的产品设计与上线，涉及智能体的
+              Workflow 编排、React架构与 Agent Harness —强制意图直连指定
+              domain、SpecDoc 状态判定、domain 拒识后回流重分配；配套设计
+              3×3意图路由评测方案完成验收。
+            </p>
+            <p>
+              <b>Trigger 数据分析与归因：</b>从用户实际使用数据出发，清洗 8,664
+              条未执行明细、抽样回看执行 trace，发现 46% 的异常 case
+              存在有效条件缺失、复杂逻辑被迫写进提示词；提出AI/手动配置双向切换、自然语言生成结构化条件方案，提高任务执行成功率
+              10%。
+            </p>
+            <p>
+              <b>需求推进：</b>从用户 case
+              与数据中发现迭代点，推动WEB端&amp;移动端
+              chatbot权限申请、工作流复制、触发器模板推荐、模型切换、IM
+              使用增强三项需求，全流程负责 PRD
+              与策略制定、技术评审、单测走查、灰度与全量。
+            </p>
+          </article>
+          <article class="job">
+            <div class="job-title">
+              <h3>TikTok研发·PMO —— AI Coding / Agent Skill 产品与开发</h3>
+              <span>2026.03 - 2026.06</span>
+            </div>
+            <p>
+              <b>背景：</b> TikTok 研发 PMO
+              团队在项目管理、知识检索等场景的大量重复性工作， AI
+              使用与开发门槛较高。 目标：以 AI Coding / Agent Skill
+              的方式将高频工作流封装为可复用 AI
+              能力，推动项目管理、知识获取等场景的 AI 提效。
+            </p>
+            <p>
+              <b>我的职责：</b>负责团队 AI 提效需求挖掘及方案开发，主导 Agent
+              Skills、Meego
+              项目管理增强、团队知识库等方向从需求分析、方案设计到开发上线：
+            </p>
+            <p>
+              <b>团队知识库：</b>面向 PMO 团队沉淀的 1000+
+              项目文档、流程规范与历史经验，构建团队级 RAG
+              知识库，完成多源文档解析清洗、语义检索与答案溯源链路，使成员可通过自然语言完成跨文档知识检索，降低新人及运营同学查找内部信息的门槛。
+            </p>
+            <p>
+              <b>Agent Skills：</b>围绕 PMO 高频办公流程，基于 OpenClaw、Hermes
+              等 Agent 设计并开发 10+
+              Skills，覆盖项目管理、会议室预订、多文档处理、内部知识检索、浏览器自动化等场景；将通用能力进一步开源至
+              ClawHub，2 个 Skills 累计下载量 2.1K+。
+            </p>
+            <p>
+              <b>Meego 项目管理增强：</b
+              >针对需求信息分散、复杂筛选与查询操作成本高的问题，打通 Meego
+              项目需求看板，将工作项、状态、负责人、优先级、排期等项目数据封装为
+              Agent 可调用能力，降低 PMO 日常项目跟踪和信息获取成本。
+            </p>
+            <p>
+              <b>AI 工程化沉淀：</b>开发 Skill Creator Pro等工具，将 Skill
+              开发中的需求澄清、开发测试与交付流程进一步标准化，降低后续 Agent
+              Skill 的开发与维护成本。
+            </p>
+          </article>
+        </section>
+        <section id="opensource" class="chapter">
+          <h2>开源作品</h2>
+          <div class="featured-projects">
+            <article class="project-card">
+              <a
+                class="work-art"
+                href="https://github.com/qiushibang/deepseek-coding-evaluation"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  src="assets/work/eval-640.webp"
+                  srcset="
+                    assets/work/eval-640.webp  640w,
+                    assets/work/eval.webp     1100w
+                  "
+                  sizes="(max-width:700px) 92vw, (max-width:960px) 30vw, 36vw"
+                  alt="真实项目编程模型评测公开仓库封面"
+                  width="1100"
+                  height="500"
+                  loading="lazy"
+                  decoding="async"
+              /></a>
+              <p class="meta">开发与评测</p>
+              <h3>真实项目编程模型评测</h3>
+              <p>
+                把四个模型放进 OpenCareer 的六道工程任务中，比较 24
+                次独立执行的完成情况、时间和估算费用。
+              </p>
+              <div>
+                <a
+                  href="https://github.com/qiushibang/deepseek-coding-evaluation"
+                  target="_blank"
+                  rel="noopener"
+                  >查看评测仓库 ↗</a
+                >
+                <a
+                  href="https://qiushibang.github.io/deepseek-coding-evaluation/"
+                  target="_blank"
+                  rel="noopener"
+                  >播放动态演示 ↗</a
+                >
+              </div>
+            </article>
+            <article class="project-card">
+              <a
+                class="work-art"
+                href="https://github.com/qiushibang/cover-generator"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  src="assets/work/cover-640.webp"
+                  srcset="
+                    assets/work/cover-640.webp  640w,
+                    assets/work/cover.webp     1100w
+                  "
+                  sizes="(max-width:700px) 92vw, (max-width:960px) 30vw, 36vw"
+                  alt="中文封面生成器公开仓库封面"
+                  width="1100"
+                  height="440"
+                  loading="lazy"
+                  decoding="async"
+              /></a>
+              <p class="meta">创作工具</p>
+              <h3>中文封面生成器</h3>
+              <p>
+                把文案、文档或项目说明做成 3:4
+                中文封面。六种版式覆盖工具演示、课程清单和创作教程。
+              </p>
+              <div>
+                <a
+                  href="https://github.com/qiushibang/cover-generator"
+                  target="_blank"
+                  rel="noopener"
+                  >查看六种模板 ↗</a
+                >
+              </div>
+            </article>
+          </div>
+          <div class="repo-list">
+            <article class="repo">
+              <a
+                href="https://github.com/qiushibang/OpenCareer"
+                class="work-art"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  src="assets/covers/opencareer.webp"
+                  width="720"
+                  height="324"
+                  decoding="async"
+                  loading="lazy"
+                  alt="OpenCareer · 求职工作台 · 作品封面"
+              /></a>
+              <h3>
+                <a
+                  href="https://github.com/qiushibang/OpenCareer"
+                  target="_blank"
+                  rel="noopener"
+                  >OpenCareer · 求职工作台 ↗</a
+                >
+              </h3>
+              <p>岗位雷达、投递跟进、模拟面试与每日订阅。</p>
+            </article>
+            <article class="repo">
+              <a
+                href="https://github.com/qiushibang/skill-creator-pro"
+                class="work-art"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  src="assets/covers/skill-creator-pro.webp"
+                  width="1080"
+                  height="480"
+                  decoding="async"
+                  loading="lazy"
+                  alt="Skill Creator Pro，从需求到技能交付。插画中的工具盒装着需求、开发与验收卡片。"
+              /></a>
+              <h3>
+                <a
+                  href="https://github.com/qiushibang/skill-creator-pro"
+                  target="_blank"
+                  rel="noopener"
+                  >Skill Creator Pro ↗</a
+                >
+              </h3>
+              <p>把需求澄清、开发、测试与交付串成一套技能开发流程。</p>
+            </article>
+            <article class="repo">
+              <a
+                href="https://github.com/qiushibang/duo-shiguang-wechat-mini-program"
+                class="work-art"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  src="assets/covers/duo.webp"
+                  width="720"
+                  height="324"
+                  decoding="async"
+                  loading="lazy"
+                  alt="双人食光 · 作品封面"
+              /></a>
+              <h3>
+                <a
+                  href="https://github.com/qiushibang/duo-shiguang-wechat-mini-program"
+                  target="_blank"
+                  rel="noopener"
+                  >双人食光 ↗</a
+                >
+              </h3>
+              <p>用微信小程序记录两个人的饮食与日常。</p>
+            </article>
+            <article class="repo">
+              <a
+                href="https://github.com/qiushibang/feishu-room-booking"
+                class="work-art"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  src="assets/covers/meeting.webp"
+                  width="720"
+                  height="324"
+                  decoding="async"
+                  loading="lazy"
+                  alt="飞书会议室预订 · 概念封面"
+              /></a>
+              <h3>
+                <a
+                  href="https://github.com/qiushibang/feishu-room-booking"
+                  target="_blank"
+                  rel="noopener"
+                  >飞书会议室预订 ↗</a
+                >
+              </h3>
+              <p>按地点、时间与人数查找可用会议室，完成预订。</p>
+            </article>
+          </div>
+          <div class="repo-list repo-index">
+            <article class="repo">
+              <h3>
+                <a
+                  href="https://github.com/qiushibang/doc-to-board"
+                  target="_blank"
+                  rel="noopener"
+                  >Doc to Board ↗</a
+                >
+              </h3>
+              <p>从飞书文档提取结构，自动生成白板。</p>
+            </article>
+            <article class="repo">
+              <h3>
+                <a
+                  href="https://github.com/qiushibang/tika-rag-skill"
+                  target="_blank"
+                  rel="noopener"
+                  >Tika RAG Skill ↗</a
+                >
+              </h3>
+              <p>让编程助手检索 Tika 企业知识库。</p>
+            </article>
+            <article class="repo">
+              <h3>
+                <a
+                  href="https://github.com/qiushibang/ai-hot"
+                  target="_blank"
+                  rel="noopener"
+                  >AI Hot ↗</a
+                >
+              </h3>
+              <p>在浏览器新标签页浏览 AI 热点，并推送到团队群。</p>
+            </article>
+            <article class="repo">
+              <h3>
+                <a
+                  href="https://github.com/qiushibang/trending-hub"
+                  target="_blank"
+                  rel="noopener"
+                  >Trending Hub ↗</a
+                >
+              </h3>
+              <p>聚合 GitHub、X 等来源的每日热点。</p>
+            </article>
+            <article class="repo">
+              <h3>
+                <a
+                  href="https://github.com/qiushibang/scaa-aircraft-supply-chain-reproducibility"
+                  target="_blank"
+                  rel="noopener"
+                  >航空供应链研究复现 ↗</a
+                >
+              </h3>
+              <p>论文代码、匿名化样例与稳健性分析结果。</p>
+            </article>
+          </div>
+        </section>
+        <section id="clawhub" class="chapter">
+          <h2>ClawHub 技能</h2>
+          <div class="skill-showcase">
+            <div class="download-total">
+              <strong>2.2k</strong><span>两款技能累计下载</span>
+            </div>
+            <div class="skill-pair">
+              <a
+                href="https://clawhub.ai/qiushibang/skills/feishu-room-booking"
+                class=""
+                target="_blank"
+                rel="noopener"
+                ><strong>飞书会议室预订 ↗</strong
+                ><span
+                  >按工区、时间和人数组合查询，找到空闲会议室后完成预订。</span
+                ></a
+              ><a
+                href="https://clawhub.ai/qiushibang/skills/bytetech"
+                class=""
+                target="_blank"
+                rel="noopener"
+                ><strong>ByteTech 文章读取 ↗</strong
+                ><span
+                  >提取技术文章的目录、正文和元信息，交给智能体继续整理。</span
+                ></a
+              >
+            </div>
+          </div>
+        </section>
+        <section id="edu" class="chapter">
+          <div class="wrap">
+            <h2>教育背景</h2>
+            <div class="pair">
+              <article class="education">
+                <span class="meta">2025.09 — 2028.06</span>
+                <h3>北京航空航天大学</h3>
+                <p>硕士（推免） · 工业工程与管理</p>
+              </article>
+              <article class="education">
+                <span class="meta">2021.09 — 2025.06</span>
+                <h3>北京航空航天大学</h3>
+                <p>学士 · 工业工程 · GPA 3.83/4.00</p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section id="pubs" class="chapter">
+          <div class="wrap">
+            <h2>研究发表</h2>
+            <article class="paper">
+              <div class="journal">
+                <i>Physica A</i><span>Elsevier · 2026</span>
+              </div>
+              <div>
+                <h3 lang="en">
+                  <a
+                    href="https://www.sciencedirect.com/science/article/pii/S0378437126007405"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Uncovering Hidden Bottlenecks in Aircraft Manufacturing
+                    Supply Chain Networks: A Structural-Constrained Asymmetric
+                    Analysis Approach
+                  </a>
+                </h3>
+                <div class="authors">
+                  Chen Wang, Bing Zhang, <span class="me">Shibang Qiu</span>,
+                  Yue Shi, Hua Zhang, Wenyan Song
+                </div>
+                <div class="links">
+                  <a
+                    href="https://www.sciencedirect.com/science/article/pii/S0378437126007405"
+                    target="_blank"
+                    rel="noopener"
+                    >ScienceDirect 全文</a
+                  >
+                   · 
+                  <a
+                    href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6625482"
+                    target="_blank"
+                    rel="noopener"
+                    >SSRN 预印本</a
+                  >
+                  ·
+                  <a
+                    href="https://github.com/qiushibang/scaa-aircraft-supply-chain-reproducibility"
+                    target="_blank"
+                    rel="noopener"
+                    >复现材料 ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+            <p class="research-note">
+              相关项目：在低空经济供应链智能体中，使用知识图谱检索多层供应关系。
+            </p>
+          </div>
+        </section>
+        <section id="skills" class="chapter">
+          <div class="wrap">
+            <h2>专业技能</h2>
+            <div class="skill-grid">
+              <div class="skill-group">
+                <h3>AI 与 Agent</h3>
+                <div class="tags">
+                  <span class="tag">Agent Harness</span
+                  ><span class="tag">多智能体编排</span
+                  ><span class="tag">RAG / GraphRAG</span>
+                  <span class="tag">Agent Skill</span
+                  ><span class="tag">MCP</span
+                  ><span class="tag">意图路由 / Decision Agent</span
+                  ><span class="tag">AI Coding</span
+                  ><span class="tag">Prompt 工程</span>
+                </div>
+              </div>
+              <div class="skill-group">
+                <h3>工程</h3>
+                <div class="tags">
+                  <span class="tag">Python</span
+                  ><span class="tag">TypeScript</span
+                  ><span class="tag">SQL</span>
+                  <span class="tag">Next.js / React</span
+                  ><span class="tag">Node.js</span
+                  ><span class="tag">FastAPI</span>
+                  <span class="tag">SQLite</span><span class="tag">Neo4j</span
+                  ><span class="tag">Chrome 扩展</span
+                  ><span class="tag">微信小程序</span
+                  ><span class="tag">Tauri</span>
+                </div>
+              </div>
+              <div class="skill-group">
+                <h3>产品与设计</h3>
+                <div class="tags">
+                  <span class="tag">Figma</span
+                  ><span class="tag">需求分析 / PRD</span
+                  ><span class="tag">数据分析与归因</span
+                  ><span class="tag">竞争调研</span
+                  ><span class="tag"
+                    >复杂网络分析（SCAA / DEMATEL / WINGS）</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer>
+          <span>© 2026 邱仕邦 · Shibang Qiu</span><a href="#top">返回页首 ↑</a>
+        </footer>
+      </main>
+    </div>
+    <script src="assets/navigation.js" defer></script>
+  </body>
 </html>
