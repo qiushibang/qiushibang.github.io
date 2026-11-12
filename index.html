@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN" data-type="service" data-radius="sharp" data-motion>
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -11,90 +11,271 @@
       name="description"
       content="邱仕邦的智能体产品与开源作品。查看 OpenCareer 求职工作台、真实项目编程模型评测，以及飞书多维表格智能体的产品与评测经历。"
     />
+    <link rel="canonical" href="https://qiushibang.github.io/" />
     <meta property="og:title" content="邱仕邦 Shibang Qiu" />
     <meta
       property="og:description"
       content="邱仕邦的智能体产品与开源作品。查看 OpenCareer 求职工作台、真实项目编程模型评测，以及飞书多维表格智能体的产品与评测经历。"
     />
     <meta property="og:type" content="profile" />
-
-    <meta name="page-type" content="service" />
-    <meta name="site-kind" content="other" />
-    <meta name="theme-color" content="#f7f5ee" />
+    <meta property="og:url" content="https://qiushibang.github.io/" />
+    <meta
+      property="og:image"
+      content="https://qiushibang.github.io/avatar.jpg"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f6f3ea" />
     <link rel="icon" href="assets/monogram.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="assets/taste/motion.css" />
-    <link rel="stylesheet" href="assets/portfolio.css" />
+    <link rel="stylesheet" href="assets/site.css" />
+    <script>
+      // Runs before first paint so the chosen theme never flashes.
+      (function () {
+        var root = document.documentElement;
+        var theme = null;
+        try {
+          theme = localStorage.getItem("sb-theme");
+        } catch (e) {}
+        if (theme !== "light" && theme !== "dark") {
+          theme =
+            window.matchMedia &&
+            matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        }
+        root.dataset.theme = theme;
+        root.classList.add("js");
+      })();
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "邱仕邦",
+        "alternateName": "Shibang Qiu",
+        "url": "https://qiushibang.github.io/",
+        "image": "https://qiushibang.github.io/avatar.jpg",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "北京航空航天大学"
+        },
+        "sameAs": [
+          "https://github.com/qiushibang",
+          "https://clawhub.ai/qiushibang"
+        ]
+      }
+    </script>
   </head>
   <body id="top">
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <symbol id="i-out" viewBox="0 0 24 24">
+          <path d="M7 17 17 7" />
+          <path d="M8 7h9v9" />
+        </symbol>
+        <symbol id="i-github" viewBox="0 0 24 24">
+          <path
+            d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+          />
+          <path d="M9 18c-4.51 2-5-2-7-2" />
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24">
+          <rect width="20" height="16" x="2" y="4" rx="2" />
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+        </symbol>
+        <symbol id="i-pkg" viewBox="0 0 24 24">
+          <path d="m7.5 4.27 9 5.15" />
+          <path d="M21 8 12 3 3 8l9 5 9-5Z" />
+          <path d="M3 8v8l9 5 9-5V8" />
+          <path d="M12 13v8" />
+        </symbol>
+        <symbol id="i-school" viewBox="0 0 24 24">
+          <path d="m2 9 10-5 10 5-10 5-10-5Z" />
+          <path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5" />
+        </symbol>
+        <symbol id="i-sun" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4" />
+          <path
+            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+          />
+        </symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+        </symbol>
+        <symbol id="i-menu" viewBox="0 0 24 24">
+          <path d="M4 8h16M4 16h16" />
+        </symbol>
+        <symbol id="i-close" viewBox="0 0 24 24">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </symbol>
+        <symbol id="i-up" viewBox="0 0 24 24">
+          <path d="m5 12 7-7 7 7M12 19V5" />
+        </symbol>
+      </defs>
+    </svg>
     <a class="skip" href="#main">跳至正文</a>
+    <div class="progress" aria-hidden="true"></div>
     <header class="topbar">
       <div class="nav-inner">
-        <a class="mast-brand" href="#top"
+        <a class="mast-brand" href="#top" aria-label="回到页首"
           ><img
             src="assets/profile-small.webp"
-            width="34"
-            height="34"
+            width="36"
+            height="36"
             alt=""
           /><span>邱仕邦<small>个人主页</small></span></a
         >
         <nav class="contents" aria-label="页内目录">
           <a href="#about">关于我</a><a href="#products">产品项目</a
           ><a href="#work">实习经历</a><a href="#opensource">开源作品</a
-          ><a href="#clawhub">ClawHub</a><a href="#edu">教育与研究</a>
+          ><a href="#clawhub">ClawHub</a><a href="#edu">教育与研究</a
+          ><span class="nav-ind" aria-hidden="true"></span>
         </nav>
-        <details class="menu">
-          <summary>目录</summary>
-          <nav aria-label="移动端目录">
-            <a href="#about">关于我</a><a href="#products">产品项目</a
-            ><a href="#work">实习经历</a><a href="#opensource">开源作品</a
-            ><a href="#clawhub">ClawHub</a><a href="#edu">教育与研究</a>
-          </nav>
-        </details>
+        <div class="bar-actions">
+          <button
+            type="button"
+            class="icon-btn theme-toggle"
+            aria-label="切换为深色模式"
+            aria-pressed="false"
+          >
+            <svg class="i i-sun" aria-hidden="true"><use href="#i-sun" /></svg>
+            <svg class="i i-moon" aria-hidden="true">
+              <use href="#i-moon" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="icon-btn menu-btn"
+            aria-expanded="false"
+            aria-controls="sheet"
+            aria-label="打开目录"
+          >
+            <svg class="i i-open" aria-hidden="true"><use href="#i-menu" /></svg>
+            <svg class="i i-shut" aria-hidden="true">
+              <use href="#i-close" />
+            </svg>
+          </button>
+        </div>
       </div>
+      <nav class="sheet" id="sheet" aria-label="移动端目录">
+        <a href="#about"><b>01</b>关于我</a
+        ><a href="#products"><b>02</b>产品项目</a
+        ><a href="#work"><b>03</b>实习经历</a
+        ><a href="#opensource"><b>04</b>开源作品</a
+        ><a href="#clawhub"><b>05</b>ClawHub</a
+        ><a href="#edu"><b>06</b>教育与研究</a>
+      </nav>
     </header>
     <div class="portfolio">
       <aside id="profile" class="identity" aria-label="个人信息">
-        <img
-          class="life-photo"
-          src="assets/life-photo-600.webp"
-          srcset="assets/life-photo-600.webp 600w, assets/life-photo.webp 900w"
-          sizes="(max-width:700px) 92vw, (max-width:960px) 205px, 310px"
-          width="900"
-          height="600"
-          alt="邱仕邦的生活照"
-          fetchpriority="high"
-          loading="lazy"
-        />
-        <div class="name">
-          <h1>邱仕邦</h1>
-          <span lang="en">Shibang Qiu</span>
+        <div class="portrait">
+          <picture>
+            <source media="(max-width: 900px)" srcset="avatar.jpg" />
+            <img
+              class="life-photo"
+              src="assets/life-photo-600.webp"
+              srcset="
+                assets/life-photo-600.webp 600w,
+                assets/life-photo.webp     900w
+              "
+              sizes="(min-width: 1500px) 340px, 22vw"
+              width="900"
+              height="600"
+              alt="邱仕邦的生活照"
+              fetchpriority="high"
+            />
+          </picture>
         </div>
-        <p class="affiliation">
-          北京航空航天大学<br />工业工程与管理 · 硕士在读
-        </p>
-        <div class="contact-links">
-          <a href="https://github.com/qiushibang" target="_blank" rel="noopener"
-            >GitHub ↗</a
-          ><a href="mailto:2294437194@qq.com">邮件联系 ↗</a
-          ><a
-            href="https://clawhub.ai/qiushibang"
-            target="_blank"
-            rel="noopener"
-            >ClawHub ↗</a
-          >
+        <div class="id-main">
+          <div class="name">
+            <h1>邱仕邦</h1>
+            <span lang="en">Shibang Qiu</span>
+          </div>
+          <p class="affiliation">
+            北京航空航天大学<br />工业工程与管理 · 硕士在读
+          </p>
+        </div>
+        <div class="id-extra">
+          <p class="status">
+            <span class="dot" aria-hidden="true"></span>目前在字节跳动 · Lark
+            Base AI
+          </p>
+          <div class="contact-links">
+            <a
+              class="contact"
+              href="https://github.com/qiushibang"
+              target="_blank"
+              rel="noopener"
+              ><svg class="i" aria-hidden="true"><use href="#i-github" /></svg
+              ><span>GitHub</span
+              ><svg class="i go" aria-hidden="true"><use href="#i-out" /></svg
+            ></a>
+            <a class="contact" href="mailto:2294437194@qq.com"
+              ><svg class="i" aria-hidden="true"><use href="#i-mail" /></svg
+              ><span>邮件联系</span
+              ><svg class="i go" aria-hidden="true"><use href="#i-out" /></svg
+            ></a>
+            <a
+              class="contact"
+              href="https://clawhub.ai/qiushibang"
+              target="_blank"
+              rel="noopener"
+              ><svg class="i" aria-hidden="true"><use href="#i-pkg" /></svg
+              ><span>ClawHub</span
+              ><svg class="i go" aria-hidden="true"><use href="#i-out" /></svg
+            ></a>
+          </div>
         </div>
       </aside>
       <main id="main">
-        <section id="about" class="intro">
+        <section id="about" class="hero">
+          <p class="eyebrow">AI 智能体 · 产品 · 开源</p>
           <h2>智能体产品与开发</h2>
-          <p>
+          <p class="lede">
             我在字节跳动做过飞书多维表格智能体的意图路由、产品设计和评测。工作之外，我开发了开源求职工作台
             OpenCareer，也把日常用到的办公流程做成了智能体技能。
           </p>
+          <div class="cta">
+            <a
+              class="btn btn--primary"
+              href="https://app.opencareer.online/"
+              target="_blank"
+              rel="noopener"
+              >体验 OpenCareer<svg class="i" aria-hidden="true">
+                <use href="#i-out" /></svg
+            ></a>
+            <a class="btn btn--ghost" href="#opensource">浏览开源作品</a>
+          </div>
+          <ul class="stats">
+            <li>
+              <strong class="stat-num"
+                ><span data-count="2.2" data-decimals="1">2.2</span
+                ><i>k</i></strong
+              ><span>ClawHub 技能累计下载</span>
+            </li>
+            <li>
+              <strong class="stat-num"
+                ><span data-count="10">10</span><i>+</i></strong
+              ><span>Agent Skills 开发</span>
+            </li>
+            <li>
+              <strong class="stat-num"
+                ><em>Top </em><span data-count="3">3</span><i>%</i></strong
+              ><span>ByteTech「AI 知识达人」</span>
+            </li>
+            <li>
+              <strong class="stat-num"
+                ><span data-count="5">5</span><i> 次</i></strong
+              ><span>ByteTech 首页文章周榜</span>
+            </li>
+          </ul>
         </section>
         <section id="products" class="chapter">
-          <h2>产品项目</h2>
-          <article class="primary-project">
+          <div class="sec-head reveal">
+            <span class="sec-no">01</span>
+            <h2>产品项目</h2>
+          </div>
+          <article class="feature reveal">
             <div class="product-heading">
               <div>
                 <h3>OpenCareer</h3>
@@ -105,12 +286,14 @@
                 class="btn btn--primary"
                 target="_blank"
                 rel="noopener"
-                >在线体验 ↗</a
-              >
+                >在线体验<svg class="i" aria-hidden="true">
+                  <use href="#i-out" /></svg
+              ></a>
             </div>
             <div class="demo">
               <h4>开源版功能展示</h4>
               <div class="tabs" role="tablist" aria-label="开源版功能">
+                <span class="tab-ind" aria-hidden="true"></span>
                 <button
                   type="button"
                   role="tab"
@@ -159,25 +342,27 @@
                       >
                     </div>
                   </div>
-                  <a
-                    class="demo-shot"
-                    href="assets/demos/subscription-settings.webp"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="放大查看：岗位订阅窗口中的北京产品实习筛选条件、发送时间和两个接收群"
-                    ><picture
-                      ><source
-                        media="(max-width: 700px)"
-                        srcset="assets/demos/subscription-phone.webp"
-                        width="812"
-                        height="1328" />
-                      <img
-                        src="assets/demos/subscription-settings.webp"
-                        alt="岗位订阅窗口中的北京产品实习筛选条件、发送时间和两个接收群"
-                        width="1312"
-                        height="1052"
-                        decoding="async" /></picture
-                  ></a>
+                  <div class="stage">
+                    <a
+                      class="demo-shot"
+                      href="assets/demos/subscription-settings.webp"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="放大查看：岗位订阅窗口中的北京产品实习筛选条件、发送时间和两个接收群"
+                      ><picture
+                        ><source
+                          media="(max-width: 700px)"
+                          srcset="assets/demos/subscription-phone.webp"
+                          width="812"
+                          height="1328" />
+                        <img
+                          src="assets/demos/subscription-settings.webp"
+                          alt="岗位订阅窗口中的北京产品实习筛选条件、发送时间和两个接收群"
+                          width="1312"
+                          height="1052"
+                          decoding="async" /></picture
+                    ></a>
+                  </div>
                 </div>
                 <div
                   class="demo-panel"
@@ -203,19 +388,22 @@
                       >
                     </div>
                   </div>
-                  <a
-                    class="demo-shot"
-                    href="assets/demos/interview-settings.webp"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="放大查看：模拟面试设置中的目标岗位、已选简历、时长与难度"
-                    ><img
-                      src="assets/demos/interview-settings.webp"
-                      alt="模拟面试设置中的目标岗位、已选简历、时长与难度"
-                      width="1024"
-                      height="624"
-                      decoding="async"
-                  /></a>
+                  <div class="stage">
+                    <a
+                      class="demo-shot"
+                      href="assets/demos/interview-settings.webp"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="放大查看：模拟面试设置中的目标岗位、已选简历、时长与难度"
+                      ><img
+                        src="assets/demos/interview-settings.webp"
+                        alt="模拟面试设置中的目标岗位、已选简历、时长与难度"
+                        width="1024"
+                        height="624"
+                        loading="lazy"
+                        decoding="async"
+                    /></a>
+                  </div>
                 </div>
                 <div
                   class="demo-panel"
@@ -236,19 +424,22 @@
                       >
                     </div>
                   </div>
-                  <a
-                    class="demo-shot"
-                    href="assets/demos/application-window.webp"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="放大查看：求职进度表中的五条演示申请，覆盖准备投递、已投递、测评、二面和录用沟通"
-                    ><img
-                      src="assets/demos/application-tracker.webp"
-                      alt="求职进度表中的五条演示申请，覆盖准备投递、已投递、测评、二面和录用沟通"
-                      width="1540"
-                      height="1130"
-                      decoding="async"
-                  /></a>
+                  <div class="stage">
+                    <a
+                      class="demo-shot"
+                      href="assets/demos/application-window.webp"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="放大查看：求职进度表中的五条演示申请，覆盖准备投递、已投递、测评、二面和录用沟通"
+                      ><img
+                        src="assets/demos/application-tracker.webp"
+                        alt="求职进度表中的五条演示申请，覆盖准备投递、已投递、测评、二面和录用沟通"
+                        width="1540"
+                        height="1130"
+                        loading="lazy"
+                        decoding="async"
+                    /></a>
+                  </div>
                 </div>
               </div>
               <noscript
@@ -264,12 +455,14 @@
               <span>开源版界面 · 演示数据</span>
               <div>
                 <a
+                  class="link"
                   href="https://github.com/qiushibang/OpenCareer"
                   target="_blank"
                   rel="noopener"
                   >开源仓库 ↗</a
                 >
                 <a
+                  class="link"
                   href="https://github.com/qiushibang/OpenCareer/blob/main/docs/GETTING_STARTED.md"
                   target="_blank"
                   rel="noopener"
@@ -278,7 +471,7 @@
               </div>
             </div>
           </article>
-          <article class="minor-project">
+          <article class="minor-project reveal">
             <h3>TRIZ-Copilot</h3>
             <p>
               工程创新设计原型。多个智能体分步澄清问题、分析技术矛盾，再结合专利检索生成可回溯的设计方案。
@@ -286,100 +479,167 @@
           </article>
         </section>
         <section id="work" class="chapter">
-          <h2>实习经历</h2>
-          <p class="company">字节跳动</p>
-          <p>
-            <b>技术影响力：</b>持续在字节内部技术社区 ByteTech 输出 AI / Agent
-            技术内容，5 次登上首页文章周榜，获评「AI 知识达人」（社区 Top
-            3%），内容创作量超过 92% 平台创作者。
-          </p>
-          <article class="job">
-            <div class="job-title">
-              <h3>Lark Base AI·多维表格智能体 —— 产品经理</h3>
-              <span>2026.06 – 至今</span>
-            </div>
-            <p>
-              <b>背景：</b>多维表格承载用户的数据资产与业务系统，此前 AI
-              以建表、搭业务系统等功能嵌入，接不住用户的开放式 AI
-              诉求。目标：将其从特定场景的 AI
-              工具，改造为能理解意图、调度工具、持续执行的通用 Agent。
+          <div class="sec-head reveal">
+            <span class="sec-no">02</span>
+            <h2>实习经历</h2>
+          </div>
+          <div class="company-block reveal">
+            <p class="company">字节跳动</p>
+            <p class="impact">
+              <b>技术影响力：</b>持续在字节内部技术社区 ByteTech 输出 AI / Agent
+              技术内容，<strong class="metric">5 次</strong>登上首页文章周榜，获评「AI
+              知识达人」（社区 <strong class="metric">Top 3%</strong>），内容创作量超过
+              <strong class="metric">92%</strong> 平台创作者。
             </p>
-            <p>
-              <b>我的职责：</b>需求 owner，主导 5
-              项功能从需求定义、方案设计到上线全量的完整迭代：
-            </p>
-            <p>
-              <b>赛道调研与差距定位：</b>实测 8 款办公 Agent（WorkBuddy /
-              QwenWork / Kimi Work / GenSpark 等），拆解记忆分层、上下文压缩与
-              Agent Harness
-              策略位，提炼「交互-能力-沉淀-集成-基座」五层框架；识别多维表格智能体在统一入口、意图路由、能力感知和持续任务上的差距，作为后续需求输入。
-            </p>
-            <p>
-              <b>意图路由 (Decision Agent)：</b>针对多能力 Agent
-              在复杂指令下存在错误路由与能力误调用的问题，负责意图分发链路的产品设计与上线，涉及智能体的
-              Workflow 编排、React架构与 Agent Harness —强制意图直连指定
-              domain、SpecDoc 状态判定、domain 拒识后回流重分配；配套设计
-              3×3意图路由评测方案完成验收。
-            </p>
-            <p>
-              <b>Trigger 数据分析与归因：</b>从用户实际使用数据出发，清洗 8,664
-              条未执行明细、抽样回看执行 trace，发现 46% 的异常 case
-              存在有效条件缺失、复杂逻辑被迫写进提示词；提出AI/手动配置双向切换、自然语言生成结构化条件方案，提高任务执行成功率
-              10%。
-            </p>
-            <p>
-              <b>需求推进：</b>从用户 case
-              与数据中发现迭代点，推动WEB端&amp;移动端
-              chatbot权限申请、工作流复制、触发器模板推荐、模型切换、IM
-              使用增强三项需求，全流程负责 PRD
-              与策略制定、技术评审、单测走查、灰度与全量。
-            </p>
-          </article>
-          <article class="job">
-            <div class="job-title">
-              <h3>TikTok研发·PMO —— AI Coding / Agent Skill 产品与开发</h3>
-              <span>2026.03 - 2026.06</span>
-            </div>
-            <p>
-              <b>背景：</b> TikTok 研发 PMO
-              团队在项目管理、知识检索等场景的大量重复性工作， AI
-              使用与开发门槛较高。 目标：以 AI Coding / Agent Skill
-              的方式将高频工作流封装为可复用 AI
-              能力，推动项目管理、知识获取等场景的 AI 提效。
-            </p>
-            <p>
-              <b>我的职责：</b>负责团队 AI 提效需求挖掘及方案开发，主导 Agent
-              Skills、Meego
-              项目管理增强、团队知识库等方向从需求分析、方案设计到开发上线：
-            </p>
-            <p>
-              <b>团队知识库：</b>面向 PMO 团队沉淀的 1000+
-              项目文档、流程规范与历史经验，构建团队级 RAG
-              知识库，完成多源文档解析清洗、语义检索与答案溯源链路，使成员可通过自然语言完成跨文档知识检索，降低新人及运营同学查找内部信息的门槛。
-            </p>
-            <p>
-              <b>Agent Skills：</b>围绕 PMO 高频办公流程，基于 OpenClaw、Hermes
-              等 Agent 设计并开发 10+
-              Skills，覆盖项目管理、会议室预订、多文档处理、内部知识检索、浏览器自动化等场景；将通用能力进一步开源至
-              ClawHub，2 个 Skills 累计下载量 2.1K+。
-            </p>
-            <p>
-              <b>Meego 项目管理增强：</b
-              >针对需求信息分散、复杂筛选与查询操作成本高的问题，打通 Meego
-              项目需求看板，将工作项、状态、负责人、优先级、排期等项目数据封装为
-              Agent 可调用能力，降低 PMO 日常项目跟踪和信息获取成本。
-            </p>
-            <p>
-              <b>AI 工程化沉淀：</b>开发 Skill Creator Pro等工具，将 Skill
-              开发中的需求澄清、开发测试与交付流程进一步标准化，降低后续 Agent
-              Skill 的开发与维护成本。
-            </p>
-          </article>
+          </div>
+          <div class="timeline">
+            <article class="job reveal">
+              <div class="job-title">
+                <h3>
+                  Lark Base AI·多维表格智能体
+                  <span class="role">产品经理</span>
+                </h3>
+                <span class="period now"
+                  ><span class="dot" aria-hidden="true"></span>2026.06 –
+                  至今</span
+                >
+              </div>
+              <dl class="facts">
+                <div>
+                  <dt>背景</dt>
+                  <dd>
+                    多维表格承载用户的数据资产与业务系统，此前 AI
+                    以建表、搭业务系统等功能嵌入，接不住用户的开放式 AI
+                    诉求。目标：将其从特定场景的 AI
+                    工具，改造为能理解意图、调度工具、持续执行的通用 Agent。
+                  </dd>
+                </div>
+                <div>
+                  <dt>我的职责</dt>
+                  <dd>
+                    需求 owner，主导 <strong class="metric">5</strong>
+                    项功能从需求定义、方案设计到上线全量的完整迭代：
+                  </dd>
+                </div>
+              </dl>
+              <div class="work-items">
+                <section>
+                  <h4>赛道调研与差距定位</h4>
+                  <p>
+                    实测 <strong class="metric">8 款</strong>办公 Agent（WorkBuddy
+                    / QwenWork / Kimi Work / GenSpark
+                    等），拆解记忆分层、上下文压缩与 Agent Harness
+                    策略位，提炼「交互-能力-沉淀-集成-基座」五层框架；识别多维表格智能体在统一入口、意图路由、能力感知和持续任务上的差距，作为后续需求输入。
+                  </p>
+                </section>
+                <section>
+                  <h4>意图路由 (Decision Agent)</h4>
+                  <p>
+                    针对多能力 Agent
+                    在复杂指令下存在错误路由与能力误调用的问题，负责意图分发链路的产品设计与上线，涉及智能体的
+                    Workflow 编排、React架构与 Agent Harness —强制意图直连指定
+                    domain、SpecDoc 状态判定、domain 拒识后回流重分配；配套设计
+                    3×3意图路由评测方案完成验收。
+                  </p>
+                </section>
+                <section>
+                  <h4>Trigger 数据分析与归因</h4>
+                  <p>
+                    从用户实际使用数据出发，清洗
+                    <strong class="metric">8,664</strong>
+                    条未执行明细、抽样回看执行 trace，发现
+                    <strong class="metric">46%</strong> 的异常 case
+                    存在有效条件缺失、复杂逻辑被迫写进提示词；提出AI/手动配置双向切换、自然语言生成结构化条件方案，提高任务执行成功率
+                    <strong class="metric">10%</strong>。
+                  </p>
+                </section>
+                <section>
+                  <h4>需求推进</h4>
+                  <p>
+                    从用户 case
+                    与数据中发现迭代点，推动WEB端&amp;移动端
+                    chatbot权限申请、工作流复制、触发器模板推荐、模型切换、IM
+                    使用增强三项需求，全流程负责 PRD
+                    与策略制定、技术评审、单测走查、灰度与全量。
+                  </p>
+                </section>
+              </div>
+            </article>
+            <article class="job reveal">
+              <div class="job-title">
+                <h3>
+                  TikTok研发·PMO
+                  <span class="role">AI Coding / Agent Skill 产品与开发</span>
+                </h3>
+                <span class="period">2026.03 - 2026.06</span>
+              </div>
+              <dl class="facts">
+                <div>
+                  <dt>背景</dt>
+                  <dd>
+                    TikTok 研发 PMO
+                    团队在项目管理、知识检索等场景的大量重复性工作， AI
+                    使用与开发门槛较高。 目标：以 AI Coding / Agent Skill
+                    的方式将高频工作流封装为可复用 AI
+                    能力，推动项目管理、知识获取等场景的 AI 提效。
+                  </dd>
+                </div>
+                <div>
+                  <dt>我的职责</dt>
+                  <dd>
+                    负责团队 AI 提效需求挖掘及方案开发，主导 Agent
+                    Skills、Meego
+                    项目管理增强、团队知识库等方向从需求分析、方案设计到开发上线：
+                  </dd>
+                </div>
+              </dl>
+              <div class="work-items">
+                <section>
+                  <h4>团队知识库</h4>
+                  <p>
+                    面向 PMO 团队沉淀的
+                    <strong class="metric">1000+</strong>
+                    项目文档、流程规范与历史经验，构建团队级 RAG
+                    知识库，完成多源文档解析清洗、语义检索与答案溯源链路，使成员可通过自然语言完成跨文档知识检索，降低新人及运营同学查找内部信息的门槛。
+                  </p>
+                </section>
+                <section>
+                  <h4>Agent Skills</h4>
+                  <p>
+                    围绕 PMO 高频办公流程，基于 OpenClaw、Hermes 等 Agent 设计并开发
+                    <strong class="metric">10+</strong>
+                    Skills，覆盖项目管理、会议室预订、多文档处理、内部知识检索、浏览器自动化等场景；将通用能力进一步开源至
+                    ClawHub，2 个 Skills 累计下载量
+                    <strong class="metric">2.1K+</strong>。
+                  </p>
+                </section>
+                <section>
+                  <h4>Meego 项目管理增强</h4>
+                  <p>
+                    针对需求信息分散、复杂筛选与查询操作成本高的问题，打通 Meego
+                    项目需求看板，将工作项、状态、负责人、优先级、排期等项目数据封装为
+                    Agent 可调用能力，降低 PMO 日常项目跟踪和信息获取成本。
+                  </p>
+                </section>
+                <section>
+                  <h4>AI 工程化沉淀</h4>
+                  <p>
+                    开发 Skill Creator Pro等工具，将 Skill
+                    开发中的需求澄清、开发测试与交付流程进一步标准化，降低后续 Agent
+                    Skill 的开发与维护成本。
+                  </p>
+                </section>
+              </div>
+            </article>
+          </div>
         </section>
         <section id="opensource" class="chapter">
-          <h2>开源作品</h2>
+          <div class="sec-head reveal">
+            <span class="sec-no">03</span>
+            <h2>开源作品</h2>
+          </div>
           <div class="featured-projects">
-            <article class="project-card">
+            <article class="project-card card reveal">
               <a
                 class="work-art"
                 href="https://github.com/qiushibang/deepseek-coding-evaluation"
@@ -391,35 +651,39 @@
                     assets/work/eval-640.webp  640w,
                     assets/work/eval.webp     1100w
                   "
-                  sizes="(max-width:700px) 92vw, (max-width:960px) 30vw, 36vw"
+                  sizes="(max-width:700px) 92vw, (max-width:1100px) 44vw, 36vw"
                   alt="真实项目编程模型评测公开仓库封面"
                   width="1100"
                   height="500"
                   loading="lazy"
                   decoding="async"
               /></a>
-              <p class="meta">开发与评测</p>
-              <h3>真实项目编程模型评测</h3>
-              <p>
-                把四个模型放进 OpenCareer 的六道工程任务中，比较 24
-                次独立执行的完成情况、时间和估算费用。
-              </p>
-              <div>
-                <a
-                  href="https://github.com/qiushibang/deepseek-coding-evaluation"
-                  target="_blank"
-                  rel="noopener"
-                  >查看评测仓库 ↗</a
-                >
-                <a
-                  href="https://qiushibang.github.io/deepseek-coding-evaluation/"
-                  target="_blank"
-                  rel="noopener"
-                  >播放动态演示 ↗</a
-                >
+              <div class="card-body">
+                <p class="meta">开发与评测</p>
+                <h3>真实项目编程模型评测</h3>
+                <p>
+                  把四个模型放进 OpenCareer 的六道工程任务中，比较 24
+                  次独立执行的完成情况、时间和估算费用。
+                </p>
+                <div class="card-links">
+                  <a
+                    class="link"
+                    href="https://github.com/qiushibang/deepseek-coding-evaluation"
+                    target="_blank"
+                    rel="noopener"
+                    >查看评测仓库 ↗</a
+                  >
+                  <a
+                    class="link"
+                    href="https://qiushibang.github.io/deepseek-coding-evaluation/"
+                    target="_blank"
+                    rel="noopener"
+                    >播放动态演示 ↗</a
+                  >
+                </div>
               </div>
             </article>
-            <article class="project-card">
+            <article class="project-card card reveal">
               <a
                 class="work-art"
                 href="https://github.com/qiushibang/cover-generator"
@@ -431,36 +695,40 @@
                     assets/work/cover-640.webp  640w,
                     assets/work/cover.webp     1100w
                   "
-                  sizes="(max-width:700px) 92vw, (max-width:960px) 30vw, 36vw"
+                  sizes="(max-width:700px) 92vw, (max-width:1100px) 44vw, 36vw"
                   alt="中文封面生成器公开仓库封面"
                   width="1100"
                   height="440"
                   loading="lazy"
                   decoding="async"
               /></a>
-              <p class="meta">创作工具</p>
-              <h3>中文封面生成器</h3>
-              <p>
-                把文案、文档或项目说明做成 3:4
-                中文封面。六种版式覆盖工具演示、课程清单和创作教程。
-              </p>
-              <div>
-                <a
-                  href="https://github.com/qiushibang/cover-generator"
-                  target="_blank"
-                  rel="noopener"
-                  >查看六种模板 ↗</a
-                >
+              <div class="card-body">
+                <p class="meta">创作工具</p>
+                <h3>中文封面生成器</h3>
+                <p>
+                  把文案、文档或项目说明做成 3:4
+                  中文封面。六种版式覆盖工具演示、课程清单和创作教程。
+                </p>
+                <div class="card-links">
+                  <a
+                    class="link"
+                    href="https://github.com/qiushibang/cover-generator"
+                    target="_blank"
+                    rel="noopener"
+                    >查看六种模板 ↗</a
+                  >
+                </div>
               </div>
             </article>
           </div>
           <div class="repo-list">
-            <article class="repo">
+            <article class="repo card reveal">
               <a
                 href="https://github.com/qiushibang/OpenCareer"
                 class="work-art"
                 target="_blank"
                 rel="noopener"
+                tabindex="-1"
                 ><img
                   src="assets/covers/opencareer.webp"
                   width="720"
@@ -469,22 +737,26 @@
                   loading="lazy"
                   alt="OpenCareer · 求职工作台 · 作品封面"
               /></a>
-              <h3>
-                <a
-                  href="https://github.com/qiushibang/OpenCareer"
-                  target="_blank"
-                  rel="noopener"
-                  >OpenCareer · 求职工作台 ↗</a
-                >
-              </h3>
-              <p>岗位雷达、投递跟进、模拟面试与每日订阅。</p>
+              <div class="card-body">
+                <h3>
+                  <a
+                    href="https://github.com/qiushibang/OpenCareer"
+                    target="_blank"
+                    rel="noopener"
+                    >OpenCareer · 求职工作台<svg class="i" aria-hidden="true">
+                      <use href="#i-out" /></svg
+                  ></a>
+                </h3>
+                <p>岗位雷达、投递跟进、模拟面试与每日订阅。</p>
+              </div>
             </article>
-            <article class="repo">
+            <article class="repo card reveal">
               <a
                 href="https://github.com/qiushibang/skill-creator-pro"
                 class="work-art"
                 target="_blank"
                 rel="noopener"
+                tabindex="-1"
                 ><img
                   src="assets/covers/skill-creator-pro.webp"
                   width="1080"
@@ -493,22 +765,26 @@
                   loading="lazy"
                   alt="Skill Creator Pro，从需求到技能交付。插画中的工具盒装着需求、开发与验收卡片。"
               /></a>
-              <h3>
-                <a
-                  href="https://github.com/qiushibang/skill-creator-pro"
-                  target="_blank"
-                  rel="noopener"
-                  >Skill Creator Pro ↗</a
-                >
-              </h3>
-              <p>把需求澄清、开发、测试与交付串成一套技能开发流程。</p>
+              <div class="card-body">
+                <h3>
+                  <a
+                    href="https://github.com/qiushibang/skill-creator-pro"
+                    target="_blank"
+                    rel="noopener"
+                    >Skill Creator Pro<svg class="i" aria-hidden="true">
+                      <use href="#i-out" /></svg
+                  ></a>
+                </h3>
+                <p>把需求澄清、开发、测试与交付串成一套技能开发流程。</p>
+              </div>
             </article>
-            <article class="repo">
+            <article class="repo card reveal">
               <a
                 href="https://github.com/qiushibang/duo-shiguang-wechat-mini-program"
                 class="work-art"
                 target="_blank"
                 rel="noopener"
+                tabindex="-1"
                 ><img
                   src="assets/covers/duo.webp"
                   width="720"
@@ -517,22 +793,26 @@
                   loading="lazy"
                   alt="双人食光 · 作品封面"
               /></a>
-              <h3>
-                <a
-                  href="https://github.com/qiushibang/duo-shiguang-wechat-mini-program"
-                  target="_blank"
-                  rel="noopener"
-                  >双人食光 ↗</a
-                >
-              </h3>
-              <p>用微信小程序记录两个人的饮食与日常。</p>
+              <div class="card-body">
+                <h3>
+                  <a
+                    href="https://github.com/qiushibang/duo-shiguang-wechat-mini-program"
+                    target="_blank"
+                    rel="noopener"
+                    >双人食光<svg class="i" aria-hidden="true">
+                      <use href="#i-out" /></svg
+                  ></a>
+                </h3>
+                <p>用微信小程序记录两个人的饮食与日常。</p>
+              </div>
             </article>
-            <article class="repo">
+            <article class="repo card reveal">
               <a
                 href="https://github.com/qiushibang/feishu-room-booking"
                 class="work-art"
                 target="_blank"
                 rel="noopener"
+                tabindex="-1"
                 ><img
                   src="assets/covers/meeting.webp"
                   width="720"
@@ -541,97 +821,123 @@
                   loading="lazy"
                   alt="飞书会议室预订 · 概念封面"
               /></a>
-              <h3>
-                <a
-                  href="https://github.com/qiushibang/feishu-room-booking"
-                  target="_blank"
-                  rel="noopener"
-                  >飞书会议室预订 ↗</a
-                >
-              </h3>
-              <p>按地点、时间与人数查找可用会议室，完成预订。</p>
+              <div class="card-body">
+                <h3>
+                  <a
+                    href="https://github.com/qiushibang/feishu-room-booking"
+                    target="_blank"
+                    rel="noopener"
+                    >飞书会议室预订<svg class="i" aria-hidden="true">
+                      <use href="#i-out" /></svg
+                  ></a>
+                </h3>
+                <p>按地点、时间与人数查找可用会议室，完成预订。</p>
+              </div>
             </article>
           </div>
           <div class="repo-list repo-index">
-            <article class="repo">
-              <h3>
-                <a
-                  href="https://github.com/qiushibang/doc-to-board"
-                  target="_blank"
-                  rel="noopener"
-                  >Doc to Board ↗</a
-                >
-              </h3>
-              <p>从飞书文档提取结构，自动生成白板。</p>
+            <article class="repo card reveal">
+              <div class="card-body">
+                <h3>
+                  <a
+                    href="https://github.com/qiushibang/doc-to-board"
+                    target="_blank"
+                    rel="noopener"
+                    >Doc to Board<svg class="i" aria-hidden="true">
+                      <use href="#i-out" /></svg
+                  ></a>
+                </h3>
+                <p>从飞书文档提取结构，自动生成白板。</p>
+              </div>
             </article>
-            <article class="repo">
-              <h3>
-                <a
-                  href="https://github.com/qiushibang/tika-rag-skill"
-                  target="_blank"
-                  rel="noopener"
-                  >Tika RAG Skill ↗</a
-                >
-              </h3>
-              <p>让编程助手检索 Tika 企业知识库。</p>
+            <article class="repo card reveal">
+              <div class="card-body">
+                <h3>
+                  <a
+                    href="https://github.com/qiushibang/tika-rag-skill"
+                    target="_blank"
+                    rel="noopener"
+                    >Tika RAG Skill<svg class="i" aria-hidden="true">
+                      <use href="#i-out" /></svg
+                  ></a>
+                </h3>
+                <p>让编程助手检索 Tika 企业知识库。</p>
+              </div>
             </article>
-            <article class="repo">
-              <h3>
-                <a
-                  href="https://github.com/qiushibang/ai-hot"
-                  target="_blank"
-                  rel="noopener"
-                  >AI Hot ↗</a
-                >
-              </h3>
-              <p>在浏览器新标签页浏览 AI 热点，并推送到团队群。</p>
+            <article class="repo card reveal">
+              <div class="card-body">
+                <h3>
+                  <a
+                    href="https://github.com/qiushibang/ai-hot"
+                    target="_blank"
+                    rel="noopener"
+                    >AI Hot<svg class="i" aria-hidden="true">
+                      <use href="#i-out" /></svg
+                  ></a>
+                </h3>
+                <p>在浏览器新标签页浏览 AI 热点，并推送到团队群。</p>
+              </div>
             </article>
-            <article class="repo">
-              <h3>
-                <a
-                  href="https://github.com/qiushibang/trending-hub"
-                  target="_blank"
-                  rel="noopener"
-                  >Trending Hub ↗</a
-                >
-              </h3>
-              <p>聚合 GitHub、X 等来源的每日热点。</p>
+            <article class="repo card reveal">
+              <div class="card-body">
+                <h3>
+                  <a
+                    href="https://github.com/qiushibang/trending-hub"
+                    target="_blank"
+                    rel="noopener"
+                    >Trending Hub<svg class="i" aria-hidden="true">
+                      <use href="#i-out" /></svg
+                  ></a>
+                </h3>
+                <p>聚合 GitHub、X 等来源的每日热点。</p>
+              </div>
             </article>
-            <article class="repo">
-              <h3>
-                <a
-                  href="https://github.com/qiushibang/scaa-aircraft-supply-chain-reproducibility"
-                  target="_blank"
-                  rel="noopener"
-                  >航空供应链研究复现 ↗</a
-                >
-              </h3>
-              <p>论文代码、匿名化样例与稳健性分析结果。</p>
+            <article class="repo card reveal">
+              <div class="card-body">
+                <h3>
+                  <a
+                    href="https://github.com/qiushibang/scaa-aircraft-supply-chain-reproducibility"
+                    target="_blank"
+                    rel="noopener"
+                    >航空供应链研究复现<svg class="i" aria-hidden="true">
+                      <use href="#i-out" /></svg
+                  ></a>
+                </h3>
+                <p>论文代码、匿名化样例与稳健性分析结果。</p>
+              </div>
             </article>
           </div>
         </section>
         <section id="clawhub" class="chapter">
-          <h2>ClawHub 技能</h2>
-          <div class="skill-showcase">
+          <div class="sec-head reveal">
+            <span class="sec-no">04</span>
+            <h2>ClawHub 技能</h2>
+          </div>
+          <div class="skill-showcase reveal">
             <div class="download-total">
-              <strong>2.2k</strong><span>两款技能累计下载</span>
+              <strong
+                ><span data-count="2.2" data-decimals="1">2.2</span
+                ><i>k</i></strong
+              ><span>两款技能累计下载</span>
             </div>
             <div class="skill-pair">
               <a
                 href="https://clawhub.ai/qiushibang/skills/feishu-room-booking"
-                class=""
                 target="_blank"
                 rel="noopener"
-                ><strong>飞书会议室预订 ↗</strong
+                ><strong
+                  >飞书会议室预订<svg class="i" aria-hidden="true">
+                    <use href="#i-out" /></svg></strong
                 ><span
                   >按工区、时间和人数组合查询，找到空闲会议室后完成预订。</span
                 ></a
               ><a
                 href="https://clawhub.ai/qiushibang/skills/bytetech"
-                class=""
                 target="_blank"
                 rel="noopener"
-                ><strong>ByteTech 文章读取 ↗</strong
+                ><strong
+                  >ByteTech 文章读取<svg class="i" aria-hidden="true">
+                    <use href="#i-out" /></svg></strong
                 ><span
                   >提取技术文章的目录、正文和元信息，交给智能体继续整理。</span
                 ></a
@@ -640,117 +946,118 @@
           </div>
         </section>
         <section id="edu" class="chapter">
-          <div class="wrap">
+          <div class="sec-head reveal">
+            <span class="sec-no">05</span>
             <h2>教育背景</h2>
-            <div class="pair">
-              <article class="education">
-                <span class="meta">2025.09 — 2028.06</span>
-                <h3>北京航空航天大学</h3>
-                <p>硕士（推免） · 工业工程与管理</p>
-              </article>
-              <article class="education">
-                <span class="meta">2021.09 — 2025.06</span>
-                <h3>北京航空航天大学</h3>
-                <p>学士 · 工业工程 · GPA 3.83/4.00</p>
-              </article>
-            </div>
+          </div>
+          <div class="pair">
+            <article class="education card reveal">
+              <span class="meta">2025.09 — 2028.06</span>
+              <h3>北京航空航天大学</h3>
+              <p>硕士（推免） · 工业工程与管理</p>
+            </article>
+            <article class="education card reveal">
+              <span class="meta">2021.09 — 2025.06</span>
+              <h3>北京航空航天大学</h3>
+              <p>学士 · 工业工程 · GPA 3.83/4.00</p>
+            </article>
           </div>
         </section>
         <section id="pubs" class="chapter">
-          <div class="wrap">
+          <div class="sec-head reveal">
+            <span class="sec-no">06</span>
             <h2>研究发表</h2>
-            <article class="paper">
-              <div class="journal">
-                <i>Physica A</i><span>Elsevier · 2026</span>
-              </div>
-              <div>
-                <h3 lang="en">
-                  <a
-                    href="https://www.sciencedirect.com/science/article/pii/S0378437126007405"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    Uncovering Hidden Bottlenecks in Aircraft Manufacturing
-                    Supply Chain Networks: A Structural-Constrained Asymmetric
-                    Analysis Approach
-                  </a>
-                </h3>
-                <div class="authors">
-                  Chen Wang, Bing Zhang, <span class="me">Shibang Qiu</span>,
-                  Yue Shi, Hua Zhang, Wenyan Song
-                </div>
-                <div class="links">
-                  <a
-                    href="https://www.sciencedirect.com/science/article/pii/S0378437126007405"
-                    target="_blank"
-                    rel="noopener"
-                    >ScienceDirect 全文</a
-                  >
-                   · 
-                  <a
-                    href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6625482"
-                    target="_blank"
-                    rel="noopener"
-                    >SSRN 预印本</a
-                  >
-                  ·
-                  <a
-                    href="https://github.com/qiushibang/scaa-aircraft-supply-chain-reproducibility"
-                    target="_blank"
-                    rel="noopener"
-                    >复现材料 ↗</a
-                  >
-                </div>
-              </div>
-            </article>
-            <p class="research-note">
-              相关项目：在低空经济供应链智能体中，使用知识图谱检索多层供应关系。
-            </p>
           </div>
+          <article class="paper card reveal">
+            <div class="journal">
+              <i>Physica A</i><span>Elsevier · 2026</span>
+            </div>
+            <div>
+              <h3 lang="en">
+                <a
+                  href="https://www.sciencedirect.com/science/article/pii/S0378437126007405"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Uncovering Hidden Bottlenecks in Aircraft Manufacturing Supply
+                  Chain Networks: A Structural-Constrained Asymmetric Analysis
+                  Approach
+                </a>
+              </h3>
+              <div class="authors">
+                Chen Wang, Bing Zhang, <span class="me">Shibang Qiu</span>, Yue
+                Shi, Hua Zhang, Wenyan Song
+              </div>
+              <div class="links">
+                <a
+                  class="pill"
+                  href="https://www.sciencedirect.com/science/article/pii/S0378437126007405"
+                  target="_blank"
+                  rel="noopener"
+                  >ScienceDirect 全文</a
+                >
+                <a
+                  class="pill"
+                  href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6625482"
+                  target="_blank"
+                  rel="noopener"
+                  >SSRN 预印本</a
+                >
+                <a
+                  class="pill"
+                  href="https://github.com/qiushibang/scaa-aircraft-supply-chain-reproducibility"
+                  target="_blank"
+                  rel="noopener"
+                  >复现材料 ↗</a
+                >
+              </div>
+            </div>
+          </article>
+          <p class="research-note reveal">
+            相关项目：在低空经济供应链智能体中，使用知识图谱检索多层供应关系。
+          </p>
         </section>
         <section id="skills" class="chapter">
-          <div class="wrap">
+          <div class="sec-head reveal">
+            <span class="sec-no">07</span>
             <h2>专业技能</h2>
-            <div class="skill-grid">
-              <div class="skill-group">
-                <h3>AI 与 Agent</h3>
-                <div class="tags">
-                  <span class="tag">Agent Harness</span
-                  ><span class="tag">多智能体编排</span
-                  ><span class="tag">RAG / GraphRAG</span>
-                  <span class="tag">Agent Skill</span
-                  ><span class="tag">MCP</span
-                  ><span class="tag">意图路由 / Decision Agent</span
-                  ><span class="tag">AI Coding</span
-                  ><span class="tag">Prompt 工程</span>
-                </div>
+          </div>
+          <div class="skill-grid">
+            <div class="skill-group card reveal">
+              <h3>AI 与 Agent</h3>
+              <div class="tags">
+                <span class="tag">Agent Harness</span
+                ><span class="tag">多智能体编排</span
+                ><span class="tag">RAG / GraphRAG</span
+                ><span class="tag">Agent Skill</span
+                ><span class="tag">MCP</span
+                ><span class="tag">意图路由 / Decision Agent</span
+                ><span class="tag">AI Coding</span
+                ><span class="tag">Prompt 工程</span>
               </div>
-              <div class="skill-group">
-                <h3>工程</h3>
-                <div class="tags">
-                  <span class="tag">Python</span
-                  ><span class="tag">TypeScript</span
-                  ><span class="tag">SQL</span>
-                  <span class="tag">Next.js / React</span
-                  ><span class="tag">Node.js</span
-                  ><span class="tag">FastAPI</span>
-                  <span class="tag">SQLite</span><span class="tag">Neo4j</span
-                  ><span class="tag">Chrome 扩展</span
-                  ><span class="tag">微信小程序</span
-                  ><span class="tag">Tauri</span>
-                </div>
+            </div>
+            <div class="skill-group card reveal">
+              <h3>工程</h3>
+              <div class="tags">
+                <span class="tag">Python</span
+                ><span class="tag">TypeScript</span><span class="tag">SQL</span
+                ><span class="tag">Next.js / React</span
+                ><span class="tag">Node.js</span
+                ><span class="tag">FastAPI</span><span class="tag">SQLite</span
+                ><span class="tag">Neo4j</span
+                ><span class="tag">Chrome 扩展</span
+                ><span class="tag">微信小程序</span
+                ><span class="tag">Tauri</span>
               </div>
-              <div class="skill-group">
-                <h3>产品与设计</h3>
-                <div class="tags">
-                  <span class="tag">Figma</span
-                  ><span class="tag">需求分析 / PRD</span
-                  ><span class="tag">数据分析与归因</span
-                  ><span class="tag">竞争调研</span
-                  ><span class="tag"
-                    >复杂网络分析（SCAA / DEMATEL / WINGS）</span
-                  >
-                </div>
+            </div>
+            <div class="skill-group card reveal">
+              <h3>产品与设计</h3>
+              <div class="tags">
+                <span class="tag">Figma</span
+                ><span class="tag">需求分析 / PRD</span
+                ><span class="tag">数据分析与归因</span
+                ><span class="tag">竞争调研</span
+                ><span class="tag">复杂网络分析（SCAA / DEMATEL / WINGS）</span>
               </div>
             </div>
           </div>
@@ -760,6 +1067,18 @@
         </footer>
       </main>
     </div>
-    <script src="assets/navigation.js" defer></script>
+    <button type="button" class="to-top" aria-label="回到页首">
+      <svg class="i" aria-hidden="true"><use href="#i-up" /></svg>
+    </button>
+    <dialog class="lightbox" aria-label="截图预览">
+      <button type="button" class="icon-btn lb-close" aria-label="关闭预览">
+        <svg class="i" aria-hidden="true"><use href="#i-close" /></svg>
+      </button>
+      <figure>
+        <img alt="" />
+        <figcaption></figcaption>
+      </figure>
+    </dialog>
+    <script src="assets/site.js"></script>
   </body>
 </html>
